@@ -70,11 +70,12 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
       <body className={PoppinsFont.className}>
         <div id="splash-screen">
           <Image alt="Logo" width={355} height={83} src={appLogo} style={{ height: '10%', width: 'auto' }} />
+          <p>Sitio web en construcción 🚧 </p>
         </div>
         <NextTopLoader color='#2864e6' showSpinner={false} />
         <AppProviders>
           <div id='__next_splash'>
-            {children}
+            {/* {children} */}
           </div>
         </AppProviders>
       </body>
