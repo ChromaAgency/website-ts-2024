@@ -1,12 +1,11 @@
 import dynamic from 'next/dynamic'
 import { ReactNode, Suspense } from 'react'
-const SessionProviderWrapper = dynamic(() => import('@/components/SessionProviderWrapper'), { ssr: false })
 const Navbar = dynamic(() => import('@/components/layout/Navbar'))
 const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'))
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <SessionProviderWrapper>
+    <>
       <Suspense fallback={<div />}>
         <Navbar />
       </Suspense>
@@ -18,7 +17,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <Suspense fallback={<div />}>
         <ScrollToTop />
       </Suspense>
-    </SessionProviderWrapper>
+      </>
   )
 }
 
