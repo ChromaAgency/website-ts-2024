@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaArrowRightLong } from 'react-icons/fa6'
+import { Project } from './types'
 
-//types
-import { Project } from '../../(protected)/landing/portfolio/types'
+
 
 const Portfolios = ({ portfolios }: { portfolios: Project[] }) => {
   return (

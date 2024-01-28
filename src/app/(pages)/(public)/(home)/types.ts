@@ -21,3 +21,19 @@ export type JobDetail = {
   location: string
   jobType: string
 }
+
+
+
+export type Project = {
+  title: string
+  description: string
+  image: StaticImageData
+}
+
+export type Testimonial = {
+  name: string
+  position: string
+  description: string
+  image: StaticImageData
+  brand: string
+}

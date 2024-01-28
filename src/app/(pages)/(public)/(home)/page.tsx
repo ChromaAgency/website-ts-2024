@@ -9,7 +9,7 @@ import Vacancies from './Vacancies'
 
 // data
 import { blogPosts, jobDetails, services } from './data'
-import { projects } from '@/app/(pages)/(protected)/landing/portfolio/data'
+import { projects } from '@/app/(pages)/(public)/(home)/data'
 
 export const metadata: Metadata = {
   title: 'Agency Landing',
