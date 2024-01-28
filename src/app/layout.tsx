@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
-import { Be_Vietnam_Pro } from 'next/font/google'
+import { Be_Vietnam_Pro, Poppins } from 'next/font/google'
 import { ReactNode } from 'react'
 import NextTopLoader from 'nextjs-toploader'
 import AppProviders from '@/components/AppProviders'
@@ -11,7 +11,7 @@ import appLogo from '@/assets/images/logo-dark.png'
 import './globals.css'
 import 'aos/dist/aos.css'
 
-const BeVietnamPro = Be_Vietnam_Pro({
+const PoppinsFont = Poppins({
   weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
   subsets: ['latin'],
@@ -63,11 +63,11 @@ const splashScreenStyles = `
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
 
   return (
-    <html lang="en">
+    <html lang="en" className='dark'>
       <head>
         <style>{splashScreenStyles}</style>
       </head>
-      <body className={BeVietnamPro.className}>
+      <body className={PoppinsFont.className}>
         <div id="splash-screen">
           <Image alt="Logo" width={355} height={83} src={appLogo} style={{ height: '10%', width: 'auto' }} />
         </div>

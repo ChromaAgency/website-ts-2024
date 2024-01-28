@@ -1,29 +1,38 @@
-import AccountPages from './AccountPages'
-import CTA from './CTA'
-import Demos from './Demos'
-import Features from './Features'
-import InnerPages from './InnerPages'
-
-//data
-import { accountPages, features, landings, secondaryPages } from './data'
+import { Metadata } from 'next'
+import Blog from './Blog'
+import Clients from './Clients'
+import Footer from './Footer'
 import Hero from './Hero'
+import Portfolios from './Portfolios'
+import Services from './Services'
+import Vacancies from './Vacancies'
 
-const Home = () => {
+// data
+import { blogPosts, jobDetails, services } from './data'
+import { projects } from '@/app/(pages)/(protected)/landing/portfolio/data'
+
+export const metadata: Metadata = {
+  title: 'Agency Landing',
+}
+
+const Agency = () => {
   return (
     <>
       <Hero />
 
-      <Demos landings={landings} />
+      <Services services={services} />
 
-      <InnerPages innerPages={secondaryPages} />
+      <Portfolios portfolios={projects} />
 
-      <AccountPages accountPages={accountPages} />
+      <Clients />
 
-      <Features features={features} />
+      <Blog blogs={blogPosts} />
 
-      <CTA />
+      <Vacancies jobDetails={jobDetails} />
+
+      <Footer />
     </>
   )
 }
 
-export default Home
+export default Agency

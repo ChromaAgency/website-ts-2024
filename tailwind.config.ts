@@ -20,7 +20,7 @@ export default {
     },
 
     fontFamily: {
-      'body': ['Be Vietnam Pro', 'sans-serif'],
+      'body': ['Poppins', 'sans-serif'],
     },
 
     extend: {

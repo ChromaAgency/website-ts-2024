@@ -1,110 +1,69 @@
-'use client'
-import Image from 'next/image'
 import Link from 'next/link'
-import { Autoplay } from 'swiper/modules'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import Typist from 'react-text-typist'
-import { FaArrowDown } from 'react-icons/fa6'
+import { FaArrowDownLong } from 'react-icons/fa6'
 
-//images
-import app from '@/assets/images/demo/home-app.jpg'
-import portfolio from '@/assets/images/demo/home-portfolio.jpg'
-import sass from '@/assets/images/demo/home-saas.jpg'
-import sass2 from '@/assets/images/demo/home-saas2.jpg'
-import marketing from '@/assets/images/demo/home-marketing.jpg'
-
-// styles
-import 'swiper/css'
-
-const SwiperSlider = () => {
-  return (
-    <Swiper
-      modules={[Autoplay]}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
-      spaceBetween={30}
-      loop
-    >
-      {([app, portfolio, sass, marketing, sass2] ?? []).map((img, idx) => {
-        return (
-          <SwiperSlide key={idx}>
-            <Image
-              width={705}
-              height={440}
-              src={img.src}
-              alt="saas1"
-              className="w-full h-full rounded-md"
-            />
-          </SwiperSlide>
-        )
-      })}
-    </Swiper>
-  )
-}
 const Hero = () => {
   return (
-    <section className="relative pt-44 pb-36 bg-gradient-to-t from-slate-500/10 overflow-x-hidden">
-      <div className="container">
-        <div className="grid lg:grid-cols-2 grid-cols-1 gap-16 items-center">
+    <section className="py-44 relative bg-amber-500/5">
+      <div className=" hero-with-shapes">
+        <div className="shape1" />
+        <div className="shape2" />
+        <div className="shape3" />
+        <div className="container">
           <div>
-            <h1 className="md:text-5xl/tight text-3xl font-semibold text-gray-700 mb-7">
-              Modern website templates, crafted with Tailwind CSS for
-              <br /> your&nbsp;
-              <Typist
-                className="typewrite capitalize relative after:absolute after:inset-x-0 after:bottom-2 after:bg-green-400/40 after:h-5 after:w-full after:-z-10"
-                sentences={[
-                  'saas',
-                  'mobile app',
-                  'software',
-                  'startup',
-                  'agency',
-                  'portfolio',
-                  'coworking',
-                  'crypto',
-                  'marketing',
-                ]}
-                typingSpeed={1500}
-                deletingSpeed={700}
-                showCursor={false}
-                startDelay={100}
-                cursorSmooth
-                pauseTime={2500}
-              />
+            <div
+              className="bg-amber-500/10 py-2 px-4 inline-block rounded-md mb-6"
+              data-aos="fade-right"
+              data-aos-duration={1000}
+            >
+              <Link href="">
+                <div className="flex items-center gap-2">
+                  <div className="inline-block px-2 text-sm text-white rounded-full bg-orange-500">
+                    New!
+                  </div>
+                  <div className="font-medium">
+                    Check our latest article on design
+                  </div>
+                </div>
+              </Link>
+            </div>
+            <h1 className="md:text-5xl text-3xl text-gray-700 font-medium my-5">
+              We design user experiences that&nbsp;
+              <span className="relative after:bg-amber-200 md:after:h-6 after:h-4 after:w-full after:inset-x-0 after:bottom-0 after:absolute after:-z-10">
+                works
+              </span>
             </h1>
-
-            <p className="text-slate-500 leading-7">
-              The Make your website or web application perfect starting point
-              for your next project and the ultimate resource for learning how
-              experts build real websites with Tailwind CSS.
+            <p className="w-3/4 text-lg font-medium mt-6 mb-20 text-slate-600">
+              We re a top-notch web design and development team helping business
+              to craft the meaningful and interactive product experiences.
             </p>
-            <div className="flex flex-wrap items-center gap-5 mt-16">
+            <div className="flex flex-wrap items-center gap-5">
               <Link
-                href="#demo"
-                className="flex gap-3 items-center py-3 px-6 rounded border border-primary text-white bg-primary hover:shadow-lg hover:shadow-primary/50 focus:outline focus:outline-primary/50 transition-all duration-500"
+                href=""
+                className="flex gap-1 items-center py-3 px-6 rounded border border-black text-white bg-black hover:shadow-lg hover:shadow-black/50 focus:outline focus:outline-black/50 transition-all duration-500"
               >
-                View Demos <FaArrowDown />
+                <FaArrowDownLong /> View Our Work
+              </Link>
+              <Link
+                href=""
+                className="py-3 px-6 rounded border border-black hover:border-black hover:bg-black hover:text-white hover:shadow-lg hover:shadow-black/50 focus:outline focus:outline-black/50 transition-all duration-500"
+              >
+                Learn More
               </Link>
             </div>
           </div>
-
-          <div className="order-1 lg:order-2">
-            <div className="relative">
-              <div className="hidden sm:block">
-                <div className="before:w-24 before:h-24 before:absolute before:-bottom-8 before:-start-8 before:bg-[url('../assets/images/pattern/dot2.svg')]"></div>
-                <div className="after:w-24 after:h-24 after:absolute after:-top-10 after:end-10 2xl:after:end-0 after:rotate-45 after:bg-[url('../assets/images/pattern/dot5.svg')]"></div>
-              </div>
-
-              <div
-                className="swiper border-[6px] border-white bg-white 2xl:w-[140%] shadow"
-                data-aos="fade-left"
-                data-aos-duration="1000"
-              >
-                <SwiperSlider />
-              </div>
-            </div>
-          </div>
+        </div>
+      </div>
+      <div className="absolute end-0 top-48 hidden md:block">
+        <div className="flex items-center gap-5 vertical-rl px-2">
+          <Link href="" className="text-lg">
+            Twitter
+          </Link>
+          <Link href="" className="text-lg">
+            Facebook
+          </Link>
+          <Link href="" className="text-lg">
+            Instagram
+          </Link>
         </div>
       </div>
     </section>
