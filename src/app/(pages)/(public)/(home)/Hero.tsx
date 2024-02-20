@@ -28,7 +28,7 @@ const Hero = () => {
             </div> */}
             <h1 className="md:text-5xl text-3xl text-gray-700 font-medium my-5">
               Comenza la transformación digital de&nbsp;
-              <span className="relative after:bg-amber-200 md:after:h-6 after:h-4 after:w-full after:inset-x-0 after:bottom-0 after:absolute after:-z-10">
+              <span className="relative after:bg-[#2ee0ca] md:after:h-6 after:h-4 after:w-full after:inset-x-0 after:bottom-0 after:absolute after:-z-10">
                 tu empresa
               </span>
             </h1>
