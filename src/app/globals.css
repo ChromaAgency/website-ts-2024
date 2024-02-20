@@ -70,14 +70,17 @@ Email: support@coderthemes.com
     }
   }
 
+
+
   .shape1 {
     position: absolute;
     top: 5%;
     left: 5%;
     width: 7rem;
     height: 7rem;
-    background: url('../assets/images/shapes/rounded-square2.svg');
+    background: url('../assets/images/shapes/circle.svg');
     animation: rotating alternate ease-in-out infinite 6s;
+    z-index: -10000;
   }
 
   .shape2 {
@@ -86,8 +89,10 @@ Email: support@coderthemes.com
     right: 10%;
     width: 7rem;
     height: 7rem;
-    background: url('../assets/images/shapes/rounded-square2.svg');
+    background: url('../assets/images/shapes/circle.svg');
     animation: rotating2 alternate ease-in-out infinite 6s;
+    z-index: -10000;
+
   }
 
   .shape3 {
@@ -96,8 +101,10 @@ Email: support@coderthemes.com
     right: 65%;
     width: 7rem;
     height: 7rem;
-    background: url('../assets/images/shapes/rounded-square2.svg');
+    background: url('../assets/images/shapes/circle.svg');
     animation: rotating3 alternate ease-in-out infinite 6s;
+    z-index: -10000;
+
   }
 }
 

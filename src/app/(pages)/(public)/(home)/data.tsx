@@ -29,9 +29,9 @@ const services: Service[] = [
       </svg>
     ),
     variant: 'bg-primary/20',
-    title: 'User Experience Design',
+    title: 'Implementación de Odoo ERP',
     description:
-      'Following the best process that a great design teams use to create products that provide meaningful and relevant experiences to users',
+      'Realizamos implementaciones de Odoo ERP para empresas, desde las ventas hasta la contabilidad, maneja toda tu empresa desde un solo sistema.',
   },
   {
     icon: (
@@ -53,9 +53,9 @@ const services: Service[] = [
       </svg>
     ),
     variant: 'bg-orange-500/10',
-    title: 'Front End Development',
+    title: 'Desarrollo de páginas y aplicaciones web',
     description:
-      'Development of the websites for businesses of all sizes and shapes and covering a small to enterprise organizations',
+      'Desarrollamos aplicaciones y páginas web para brindar a tus clientes las mejores experiencias.',
   },
   {
     icon: (
@@ -77,9 +77,9 @@ const services: Service[] = [
       </svg>
     ),
     variant: 'bg-green-500/10',
-    title: 'Brand Identitty Design',
+    title: 'Consultoria de empresas',
     description:
-      'Making a new identities for your brand with an effective collaboration and considered design. We treat your brand like our own',
+      'Realizamos consultoria de empresas para que puedas generar tus procesos, y mejorar la eficiencia de tu operación',
   },
 ]
 

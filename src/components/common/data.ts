@@ -158,18 +158,18 @@ const pricingCards: PricingCard = {
 }
 
 const footerLinks: FooterLink = {
-  platform: {
-    links: ['Demo', 'Pricing', 'Integrations', 'Status'],
-  },
-  'Knowledge Base': {
-    links: ['Blog', 'Help Center', 'Sales Tools catalog', 'API'],
-  },
-  company: {
-    links: ['About us', 'Career', 'Contact Us'],
-  },
-  legal: {
-    links: ['Usage Policy', 'Privacy Policy', 'Terms of Service', 'Trust'],
-  },
+  // platform: {
+  //   links: ['Demo', 'Pricing', 'Integrations', 'Status'],
+  // },
+  // 'Knowledge Base': {
+  //   links: ['Blog', 'Help Center', 'Sales Tools catalog', 'API'],
+  // },
+  // Company: {
+  //   links: ['About us', 'Career', 'Contact Us'],
+  // },
+  // legal: {
+  //   links: ['Usage Policy', 'Privacy Policy', 'Terms of Service', 'Trust'],
+  // },
 }
 
 export { testimonials, plans, FAQContent, footerLinks, pricingCards }

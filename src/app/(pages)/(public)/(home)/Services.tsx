@@ -6,9 +6,9 @@ const Services = ({ services }: { services: Service[] }) => {
     <section className="py-20">
       <div className="container">
         <div className="text-center">
-          <h1 className="text-3xl font-medium">What We Do</h1>
+          <h1 className="text-3xl font-bold">Lo que hacemos</h1>
           <p className="font-medium text-slate-500 mt-5 mb-4">
-            We are helping businesses to develop their web applications
+            Transformamos digitalmente tu empresa con nuestros servicios
           </p>
         </div>
         <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 pt-12 gap-4">

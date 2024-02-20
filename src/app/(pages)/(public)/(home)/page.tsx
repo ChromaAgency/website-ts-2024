@@ -12,7 +12,8 @@ import { blogPosts, jobDetails, services } from './data'
 import { projects } from '@/app/(pages)/(public)/(home)/data'
 
 export const metadata: Metadata = {
-  title: 'Agency Landing',
+  title: 'Odoo ERP y consultoría de negocios',
+  description: "Implementamos Odoo ERP, revisamos tus procesos y te ayudamos a digitalizar tu empresa",
 }
 
 const Agency = () => {
@@ -22,15 +23,14 @@ const Agency = () => {
 
       <Services services={services} />
 
-      <Portfolios portfolios={projects} />
+      {/* <Portfolios portfolios={projects} />
 
       <Clients />
 
       <Blog blogs={blogPosts} />
 
-      <Vacancies jobDetails={jobDetails} />
+      <Vacancies jobDetails={jobDetails} /> */}
 
-      <Footer />
     </>
   )
 }

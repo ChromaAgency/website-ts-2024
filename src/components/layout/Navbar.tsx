@@ -46,19 +46,16 @@ const Navbar = () => {
             <Link href="/">
               <Image src={logoDark} className="h-8" width={126} alt="Logo" />
             </Link>
-            <div className="lg:block hidden ms-auto">
+            {/* <div className="lg:block hidden ms-auto">
               <AppMenu menuItems={getHorizontalMenuItems()} />
-            </div>
-            <div className="hidden lg:flex items-center ms-3">
-              <button className="bg-primary text-white px-4 py-2 rounded inline-flex items-center text-sm">
-                Download
-              </button>
-            </div>
+            </div> */}
+            
+            {/* To add when creating pages
             <div className="lg:hidden flex items-center ms-auto px-2.5">
               <button type="button" onClick={toggleOffcanvas}>
                 <FaBars size={24} />
               </button>
-            </div>
+            </div> */}
           </nav>
         </div>
       </header>
@@ -82,16 +79,7 @@ const Navbar = () => {
           <div className="p-6 overflow-scroll h-full" id="right-menu">
             <VerticalMenu menuItems={getMenuItems()} />
           </div>
-          {/* Mobile Menu Download Button (Footer) */}
-          <div className="p-6 flex items-center justify-center">
-            <Link
-              target="_blank"
-              href="https://themeforest.net/item/prompt-tailwind-css-multipurpose-landing-template/46369753"
-              className="bg-primary w-full text-white p-3 rounded flex items-center justify-center text-sm"
-            >
-              Download
-            </Link>
-          </div>
+         
         </div>
       </OffcanvasLayout>
     </>

@@ -23,10 +23,13 @@ const Footer = () => {
               />
             </Link>
             <p className="text-gray-500/80 mt-5">
-              300 Park Avenue, 12th Floor New York, NY 10022
+              Olavarria 1150, CABA, Argentina
             </p>
             <p className="text-gray-500/80 mt-5">
-              1499 Burwell Heights Road Port Arthur Meadow Nashville, TX 77642
+              Medellin, Colombia
+            </p>
+            <p className="text-gray-500/80 mt-5">
+              Queretaro, México
             </p>
           </div>
           <div className="xl:col-span-3 col-span-4 xl:mx-20">
@@ -49,11 +52,11 @@ const Footer = () => {
                 })}
               <div>
                 <div className="flex flex-col gap-3">
-                  <h5 className="mb-3">Get in touch</h5>
+                  <h5 className="mb-3">Escribinos</h5>
                   <div className="text-gray-500/80">
-                    <Link href="/">hello@Prompt.com</Link>
+                    <Link href="/">web@chroma.agency</Link>
                   </div>
-                  <div className="flex sm:justify-center gap-7">
+                  {/* <div id="footer-social-links" className="flex sm:justify-center gap-7">
                     <div>
                       <Link href="/">
                         <svg
@@ -129,7 +132,7 @@ const Footer = () => {
                         </svg>
                       </Link>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -138,13 +141,7 @@ const Footer = () => {
         <div className="border-b my-5" />
         <div className="text-center">
           <p className="text-gray-500/80 text-sm">
-            {new Date().getFullYear()}© Prompt. All rights reserved. Crafted by
-            <Link
-              href="/"
-              className="text-gray-800 hover:text-primary transition-all"
-            >
-              Coderthemes
-            </Link>
+            {new Date().getFullYear()} por <Link href="/">Chroma</Link>
           </p>
         </div>
       </div>
