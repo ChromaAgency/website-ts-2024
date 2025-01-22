@@ -31,7 +31,7 @@ export type MenuItemTypes = {
 const MENU_ITEMS: MenuItemTypes[] = [
   {
     key: 'home',
-    label: 'Home',
+    label: 'Inicio',
     url: '/',
     isTitle: false,
   },
@@ -106,7 +106,7 @@ const MENU_ITEMS: MenuItemTypes[] = [
   
   {
     key: 'contact-us',
-    label: 'Contact us',
+    label: 'Contacto',
     url: '/contact-us',
     isTitle: false,
   },
@@ -115,7 +115,7 @@ const MENU_ITEMS: MenuItemTypes[] = [
 const HORIZONTAL_MENU_ITEMS: MenuItemTypes[] = [
   {
     key: 'home',
-    label: 'Home',
+    label: 'Inicio',
     url: '/',
     isTitle: true,
   },
@@ -177,12 +177,12 @@ const HORIZONTAL_MENU_ITEMS: MenuItemTypes[] = [
   //         },
   //       ],
   //     },
-  //     {
-  //       key: 'pages-company',
-  //       label: 'Company',
-  //       url: '/pages/company',
-  //       parentKey: 'pages',
-  //     },
+      {
+        key: 'pages-company',
+        label: 'Odoo',
+        url: '/pages/company',
+        parentKey: 'pages',
+      },
   //     {
   //       key: 'pages-dashboard',
   //       label: 'Dashboard',
@@ -243,7 +243,7 @@ const HORIZONTAL_MENU_ITEMS: MenuItemTypes[] = [
   // },
   {
     key: 'contact-us',
-    label: 'Contact us',
+    label: 'Contacto',
     url: '/contact-us',
     isTitle: true,
   },

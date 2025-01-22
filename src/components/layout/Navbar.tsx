@@ -46,16 +46,14 @@ const Navbar = () => {
             <Link href="/">
               <Image src={logoDark} className="h-8" width={126} alt="Logo" />
             </Link>
-            {/* <div className="lg:block hidden ms-auto">
+            <div className="lg:block hidden ms-auto">
               <AppMenu menuItems={getHorizontalMenuItems()} />
-            </div> */}
-            
-            {/* To add when creating pages
-            <div className="lg:hidden flex items-center ms-auto px-2.5">
+            </div> 
+            {/* <div className="lg:hidden flex items-center ms-auto px-2.5">
               <button type="button" onClick={toggleOffcanvas}>
                 <FaBars size={24} />
               </button>
-            </div> */}
+            </div>  */}
           </nav>
         </div>
       </header>

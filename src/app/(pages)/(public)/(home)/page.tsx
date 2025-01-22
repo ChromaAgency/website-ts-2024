@@ -23,13 +23,13 @@ const Agency = () => {
 
       <Services services={services} />
 
-      {/* <Portfolios portfolios={projects} />
+      <Portfolios portfolios={projects} />
 
       <Clients />
 
       <Blog blogs={blogPosts} />
 
-      <Vacancies jobDetails={jobDetails} /> */}
+      <Vacancies jobDetails={jobDetails} />
 
     </>
   )
