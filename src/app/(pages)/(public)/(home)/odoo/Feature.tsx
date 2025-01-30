@@ -10,23 +10,19 @@ const Feature = () => {
       <div className="container" data-aos="fade-up">
         <div className="grid lg:grid-cols-2 gap-14">
           <div className="order-2 lg:order-1">
-            <h1 className="text-3xl mb-7">Build amazing things together</h1>
+            <h1 className="text-3xl mb-7 text-[#310860]">Hagamos que suceda.</h1>
             <p className="text-sm/relaxed tracking-wider text-gray-600 mb-5">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium totam rem aperiam beatae vitae
-              dicta sunt explicabo.
+              Implementar Odoo no se trata solo de instalar un software, sino de integrarlo de manera estratégica en los procesos de tu negocio. Nuestra experiencia y enfoque garantizan que Odoo funcione como una solución diseñada a medida para tus necesidades.
             </p>
             <p className="text-sm/relaxed tracking-wider text-gray-600 mb-7">
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium totam rem aperiam beatae vitae
-              dicta sunt explicabo.
+              Entendemos que cada empresa es única. Por eso, adaptamos y personalizamos Odoo según tus necesidades actuales, manteniendo siempre la posibilidad de escalar y agregar funcionalidades a medida que crezcas.
             </p>
             <div className="flex items-center">
               <a
-                href="#"
-                className="text-primary inline-flex gap-2 items-center"
+                href="/contact-us"
+                className="text-[#8a50bc] inline-flex gap-2 items-center underline"
               >
-                Learn more <FaArrowRight />
+                Contactanos <FaArrowRight />
               </a>
             </div>
           </div>

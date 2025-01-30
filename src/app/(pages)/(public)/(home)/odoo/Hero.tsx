@@ -6,24 +6,23 @@ const Hero = () => {
       <section className="pt-36 pb-24 relative">
         <div className="container">
           <div className="text-center">
-            <h1 className="text-3xl/tight sm:text-4xl/tight lg:text-5xl/tight font-semibold mb-5">
-              We are on a mission to&nbsp;
-              <span className="relative z-0 after:bg-primary/30 after:-z-10 after:absolute md:after:h-6 sm:after:h-5 after:h-4 after:w-full after:bottom-0 after:end-0">
-                revolutionize
+            <h1 className="text-3xl/tight sm:text-4xl/tight lg:text-5xl/tight font-semibold mb-5 text-[#8a50bc] ">
+            ¿QUE ES &nbsp;
+              <span className="relative z-0 after:bg-[#2ee0ca] after:-z-10 after:absolute md:after:h-6 sm:after:h-5 after:h-4 after:w-full after:bottom-0 after:end-0">
+                ODOO
               </span>
-              &nbsp;the web
+              &nbsp;?
             </h1>
             <p className="sm:text-lg text-gray-500">
-              We are a full-stack web development studio, run by people who are
-              very passionate about making the web more beautiful
+            Odoo no es solo un software; es una inversión estratégica para empresas que buscan operar de manera inteligente y mantenerse competitivas en mercados dinámicos.
             </p>
           </div>
         </div>
       </section>
       <section>
         <span className="flex justify-center items-center relative z-20 translate-y-1/2">
-          <div className="bg-primary text-white rounded-md text-sm font-semibold flex-none shadow shadow-primary/20 cursor-pointer hover:shadow-lg hover:shadow-primary/30 focus:shadow-none focus:outline focus:outline-primary/30 uppercase px-16 py-3">
-            Let&apos;s Have Talk
+          <div className="bg-[#8a50bc] text-white rounded-md text-sm font-semibold flex-none shadow shadow-primary/20 cursor-pointer hover:shadow-lg hover:shadow-primary/30 focus:shadow-none focus:outline focus:outline-primary/30 uppercase px-16 py-3">
+            Leer más
           </div>
         </span>
 
