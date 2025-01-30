@@ -26,21 +26,21 @@ const Hero = () => {
                 </div>
               </Link>
             </div> */}
-            <h1 className="md:text-5xl text-3xl text-gray-700 font-medium my-5">
-              Comenza la transformación digital de&nbsp;
+            <h1 className="md:text-7xl text-3xl text-[#310860] font-medium my-5">
+              CHROMA&nbsp;
               <span className="relative after:bg-[#2ee0ca] md:after:h-6 after:h-4 after:w-full after:inset-x-0 after:bottom-0 after:absolute after:-z-10">
-                tu empresa
+                AGENCY
               </span>
             </h1>
-            <h2 className="w-3/4 text-lg font-medium mt-6 mb-20 text-slate-600">
-              Comenza a digitalizar tu empresa con Odoo
+            <h2 className="w-3/4 text-4xl font-medium mt-6 mb-20 text-[#8a50bc]">
+              DIGITALIZACIÓN DE TU EMPRESA.
             </h2>
             <div className="flex flex-wrap items-center gap-5">
               <Link
                 href="#portfolios"
-                className="flex gap-1 items-center py-3 px-6 rounded border border-black text-white bg-black hover:shadow-lg hover:shadow-black/50 focus:outline focus:outline-black/50 transition-all duration-500"
+                className="flex gap-1 items-center py-3 px-6 rounded border border-[#310860] text-white  bg-[#310860] hover:shadow-lg hover:text-[#310860] hover:bg-white  hover:shadow-[#474747] focus:outline focus:outline-black/50 transition-all duration-500"
               >
-                <FaArrowDownLong /> Conoce nuestro trabajo
+                <FaArrowDownLong /> Servicios
               </Link>
               {/* 
               TODO: Add later
