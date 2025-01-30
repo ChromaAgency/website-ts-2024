@@ -6,10 +6,7 @@ const Services = ({ services }: { services: Service[] }) => {
     <section className="py-20">
       <div className="container">
         <div className="text-center">
-          <h1 className="text-3xl font-bold">Lo que hacemos</h1>
-          <p className="font-medium text-slate-500 mt-5 mb-4">
-            Transformamos digitalmente tu empresa con nuestros servicios
-          </p>
+          <h1 className="text-3xl font-bold text-[#310860]">SERVICIOS</h1>
         </div>
         <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 pt-12 gap-4">
           {services.map((service, idx) => {
@@ -25,8 +22,8 @@ const Services = ({ services }: { services: Service[] }) => {
                 >
                   {service.icon}
                 </div>
-                <h4 className="text-base font-medium my-5">{service.title}</h4>
-                <p className="text-slate-400">{service.description}</p>
+                <h4 className="text-[#310860] font-medium my-5">{service.title}</h4>
+                <p className="text-[#696969]">{service.description}</p>
               </div>
             )
           })}

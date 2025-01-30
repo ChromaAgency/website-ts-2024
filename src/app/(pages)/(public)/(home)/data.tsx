@@ -29,9 +29,9 @@ const services: Service[] = [
       </svg>
     ),
     variant: 'bg-primary/20',
-    title: 'Implementación de Odoo ERP',
+    title: 'Implementación de Odoo ERP.',
     description:
-      'Realizamos implementaciones de Odoo ERP para empresas, desde las ventas hasta la contabilidad, maneja toda tu empresa desde un solo sistema.',
+      'Realizamos implementaciones de Odoo ERP para empresas, desde las ventas hasta la contabilidad, permitiendote centralizar toda tu empresa en un solo sistema. Nuestra experiencia asegura una implementación que mejora la eficiencia, reduce costos operativos y maximiza el potencial de Odoo en tu negocio.',
   },
   {
     icon: (
@@ -53,9 +53,9 @@ const services: Service[] = [
       </svg>
     ),
     variant: 'bg-orange-500/10',
-    title: 'Desarrollo de páginas y aplicaciones web',
+    title: 'Desarrollos: Página WEB | Chatbots con IA | Aplicaciones webs y nativas.',
     description:
-      'Desarrollamos aplicaciones y páginas web para brindar a tus clientes las mejores experiencias.',
+      'Con soluciones a medida, integramos tecnología que se ajusta a vos, sin limitar tus operaciones ni comprometer tu forma de trabajar, optimizando procesos y alineándose con la estructura única de tu negocio.',
   },
   {
     icon: (
@@ -77,9 +77,9 @@ const services: Service[] = [
       </svg>
     ),
     variant: 'bg-green-500/10',
-    title: 'Consultoria de empresas',
+    title: 'Consultoria Empresarial.',
     description:
-      'Realizamos consultoria de empresas para que puedas generar tus procesos, y mejorar la eficiencia de tu operación',
+      'Ofrecemos un servicio diseñado para ayudarte a estructurar tus procesos y maximizar la eficiencia operativa. Analizamos tus necesidades, identificamos áreas de mejora y desarrollamos estrategias personalizadas que impulsan el desempeño de tu empresa.',
   },
 ]
 
