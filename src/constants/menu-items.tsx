@@ -180,7 +180,7 @@ const HORIZONTAL_MENU_ITEMS: MenuItemTypes[] = [
       {
         key: 'pages-company',
         label: 'Odoo',
-        url: '/pages/company',
+        url: '/odoo',
         parentKey: 'pages',
       },
   //     {
