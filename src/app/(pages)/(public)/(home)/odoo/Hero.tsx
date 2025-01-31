@@ -25,7 +25,7 @@ const Hero = () => {
             Leer más
           </div>
         </span>
-
+ 
         {/*
           The react-scroll-parallax does not support NextJs versions over v13.4.1, 
           you can uncomment and use the below HeroBanner component if you wish to 
