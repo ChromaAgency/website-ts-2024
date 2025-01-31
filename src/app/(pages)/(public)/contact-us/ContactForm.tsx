@@ -31,22 +31,22 @@ const ContactForm = () => {
         <div className="md:w-1/2">
           <FormInput
             control={control}
-            label="First Name"
+            label="Nombre"
             name="fname"
             type="text"
             className="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0"
-            placeholder="Your First Name"
+            placeholder="Juan"
             labelClassName="block text-sm font-medium mb-1 text-gray-600"
             containerClassName="mb-5"
           />
         </div>
         <div className="md:w-1/2">
           <FormInput
-            label="Last Name"
+            label="Apellido"
             name="lname"
             type="text"
             className="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0"
-            placeholder="Your Last Name"
+            placeholder="Perez"
             labelClassName="block text-sm font-medium mb-1 text-gray-600"
             containerClassName="mb-5"
             control={control}
@@ -59,16 +59,16 @@ const ContactForm = () => {
           name="email"
           type="email"
           className="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0"
-          placeholder="Your Email"
+          placeholder="juan@perez.com"
           labelClassName="block text-sm font-medium mb-1 text-gray-600"
           containerClassName="mb-5"
           control={control}
         />
         <FormTextArea
-          label="Message"
+          label="Mensaje"
           name="message"
           className="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0"
-          placeholder="Type Your Massage..."
+          placeholder="Tipea tu mensaje aquí..."
           labelClassName="block text-sm font-medium mb-1 text-gray-600"
           containerClassName="mb-5"
           rows={4}
@@ -79,7 +79,7 @@ const ContactForm = () => {
         type="submit"
         className="inline-flex items-center text-sm bg-primary text-white font-medium leading-6 text-center align-middle select-none py-2 px-4 rounded-md transition-all hover:shadow-lg hover:shadow-primary/80"
       >
-        Send
+        Enviar
         <span className="w-4 h-4 ms-1">
           <svg
             className="w-full h-full text-white"
