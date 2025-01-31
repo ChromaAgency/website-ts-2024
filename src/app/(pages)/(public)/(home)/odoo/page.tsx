@@ -23,13 +23,12 @@ const Company = () => {
 
       <Feature />
 
-      <Counter />
+      {/* <Counter />
 
       <Team teamMembers={teamMembers} />
 
-      <Client />
+      <Client /> */}
 
-      <Footer />
     </div>
   )
 }
