@@ -7,13 +7,13 @@ import { FormInput, FormTextArea } from '@/components'
 const ContactForm = () => {
   // form validation schema
   const contactUsSchema = yup.object().shape({
-    fname: yup.string().required('Please enter first name'),
-    lname: yup.string().required('Please enter last name'),
+    fname: yup.string().required('Por favor ingrese su nombre'),
+    lname: yup.string().required('Por favor ingrese su apellido'),
     email: yup
       .string()
-      .email('Please enter valid Email')
-      .required('Please enter Email'),
-    message: yup.string().required('Please enter Message'),
+      .email('Por favor ingrese un correo electrónico válido')
+      .required('Por favor ingrese su correo electrónico'),
+    message: yup.string().required('Por favor ingrese su mensaje'),
   })
 
   const { control, handleSubmit, reset } = useForm({
@@ -23,7 +23,7 @@ const ContactForm = () => {
   return (
     <form
       onSubmit={handleSubmit(() => {
-        alert("Your request has been received, We'll contact you soon!")
+        alert("Su pedido ha sido recibido, le contactaremos pronto!")
         reset()
       })}
     >
@@ -31,22 +31,22 @@ const ContactForm = () => {
         <div className="md:w-1/2">
           <FormInput
             control={control}
-            label="First Name"
+            label="Nombre"
             name="fname"
             type="text"
             className="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0"
-            placeholder="Your First Name"
+            placeholder="Nombre"
             labelClassName="block text-sm font-medium mb-1 text-gray-600"
             containerClassName="mb-5"
           />
         </div>
         <div className="md:w-1/2">
           <FormInput
-            label="Last Name"
+            label="Apellido"
             name="lname"
             type="text"
             className="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0"
-            placeholder="Your Last Name"
+            placeholder="Apellido"
             labelClassName="block text-sm font-medium mb-1 text-gray-600"
             containerClassName="mb-5"
             control={control}
@@ -59,16 +59,16 @@ const ContactForm = () => {
           name="email"
           type="email"
           className="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0"
-          placeholder="Your Email"
+          placeholder="Su correo electrónico"
           labelClassName="block text-sm font-medium mb-1 text-gray-600"
           containerClassName="mb-5"
           control={control}
         />
         <FormTextArea
-          label="Message"
+          label="Mensaje"
           name="message"
           className="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0"
-          placeholder="Type Your Massage..."
+          placeholder="Escribe un mensaje..."
           labelClassName="block text-sm font-medium mb-1 text-gray-600"
           containerClassName="mb-5"
           rows={4}
@@ -77,9 +77,9 @@ const ContactForm = () => {
       </div>
       <button
         type="submit"
-        className="inline-flex items-center text-sm bg-primary text-white font-medium leading-6 text-center align-middle select-none py-2 px-4 rounded-md transition-all hover:shadow-lg hover:shadow-primary/80"
+        className="inline-flex items-center text-sm  bg-[#8a50bc] text-white font-medium leading-6 text-center align-middle select-none py-2 px-4 rounded-md transition-all hover:shadow-lg hover:shadow-primary/80"
       >
-        Send
+        Enviar
         <span className="w-4 h-4 ms-1">
           <svg
             className="w-full h-full text-white"

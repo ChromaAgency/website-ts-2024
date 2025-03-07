@@ -4,7 +4,7 @@ import Hero from './Hero'
 import ContactUs from './ContactUs'
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
+  title: 'Contactáctanos',
 }
 
 const Contact = () => {

@@ -9,13 +9,6 @@ const ContactUs = () => {
           <div className="lg:w-1/2">
             <div className="mb-6 relative bg-clip-border rounded-[0.1875rem]">
               <div className="py-12">
-                <h2 className="mb-4 text-2xl/6 mt-0 font-medium">
-                  Let&apos;s Talk Further
-                </h2>
-                <p className="mb-12 text-base/6">
-                  Please fill out the following form and we will get back to you
-                  shortly
-                </p>
                 <ContactForm />
               </div>
             </div>
@@ -26,7 +19,7 @@ const ContactUs = () => {
                 id="marker-map5"
                 className="h-100"
                 data-toggle="map"
-                data-map='{"mapCenter": [40.749179, -73.989276], "zoom": 12, "useTextIcon": false, "interactive": true, "geojson": "/assets/sample-listing-geojson.json" }'
+                data-map='{"mapCenter": [-34.63931412271855, -58.36890305653151], "zoom": 12, "useTextIcon": false, "interactive": true, "geojson": "/assets/sample-listing-geojson.json" }'
               >
                 <iframe
                   className="w-full h-[500px]"
@@ -66,11 +59,11 @@ const ContactUs = () => {
             <div className="grow">
               <h5 className="text-base text-gray-700">Email</h5>
               <a href="#" className="text-gray-500 my-1">
-                youremail@gmail.com
+                web@chroma.agency
               </a>
             </div>
           </div>
-          <div className="flex mb-3">
+          {/* <div className="flex mb-3">
             <span className="flex items-center justify-center w-12 h-12 bg-orange-500/20 rounded-lg relative me-4 shrink-0">
               <svg
                 className="w-7 h-7 text-orange-500"
@@ -101,7 +94,7 @@ const ContactUs = () => {
                 +00 123 456 7890
               </a>
             </div>
-          </div>
+          </div> */}
           <div className="flex mb-3">
             <span className="flex items-center justify-center w-12 h-12 bg-teal-500/20 rounded-lg relative me-4 shrink-0">
               <svg
@@ -122,9 +115,9 @@ const ContactUs = () => {
               </svg>
             </span>
             <div className="grow">
-              <h5 className="text-base text-gray-700">Address</h5>
+              <h5 className="text-base text-gray-700">Dirección</h5>
               <Link href="" className="text-gray-500 my-1">
-                565 Brrom Str, NY
+              Av. Regimiento de Patricios 1052 Ofic. 563, CABA, Argentina
               </Link>
             </div>
           </div>
