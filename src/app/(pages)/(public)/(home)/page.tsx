@@ -23,7 +23,7 @@ const Agency = () => {
 
       <Services services={services} />
 
-      <Portfolios portfolios={projects} />
+      {/* <Portfolios portfolios={projects} /> */}
 
       <Clients />
 

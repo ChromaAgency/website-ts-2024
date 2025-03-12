@@ -117,7 +117,7 @@ const ContactUs = () => {
             <div className="grow">
               <h5 className="text-base text-gray-700">Dirección</h5>
               <Link href="" className="text-gray-500 my-1">
-              Av. Regimiento de Patricios 1052 Ofic. 563, CABA, Argentina
+               Olavarria 1150, CABA, Argentina.
               </Link>
             </div>
           </div>

@@ -23,7 +23,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-gray-500/80 mt-5">
-              Olavarria 1150, CABA, Argentina
+              Olavarria 1150, CABA, Argentina.
             </p>
             <p className="text-gray-500/80 mt-5">
               Medellin, Colombia
