@@ -5,7 +5,7 @@ import BackgroundImage from '@/assets/images/hero/Chroma_LogoWhiteBackground.png
 
 const Hero = () => {  
   return (  
-    <section className="py-44 relative bg-slate-500/5">  
+    <section className="py-44 relative bg-[#2ee0ca]/10">  
       <div className=" hero-with-shapes">  
         <div className="shape1" />  
         <div className="shape2" />  

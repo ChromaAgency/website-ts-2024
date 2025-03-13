@@ -10,7 +10,7 @@ import whiteWave from '@/assets/images/shapes/white-wave.svg'
 
 const Clients = () => {
   return (
-    <section className="py-32 relative bg-orange-700/10">
+    <section className="py-32 relative bg-[#2ee0ca]/10 ">
       <div className="absolute top-0 inset-x-0 hidden sm:block">
         <Image src={whiteWave} alt="svg" className="w-full -scale-x-100" />
       </div>
@@ -19,7 +19,7 @@ const Clients = () => {
           Tecnologías utilizadas. 
         </span>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-5">
-          <h1 className="text-3xl font-semibold">
+          <h1 className="text-3xl font-semibold text-[#310860]">
             Trabajamos con las ultimas tecnologías para crear aplicaciones y sitios web de alta calidad.
           </h1>
           <p className="text-slate-600">

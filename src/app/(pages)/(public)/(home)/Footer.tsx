@@ -9,7 +9,7 @@ import logoDark from '@/assets/images/logo-dark.png'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 pt-14 pb-5">
+    <footer className=" bg-[#2ee0ca]/10 pt-14 pb-5">
       <div className="container">
         <div className="grid grid-cols-4 gap-14">
           <div className="xl:col-span-1 col-span-4">
