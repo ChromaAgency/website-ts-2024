@@ -3,7 +3,7 @@ import { Service } from './types'
 
 const Services = ({ services }: { services: Service[] }) => {
   return (
-    <section className="py-20">
+    <section id="services" className="py-20">
       <div className="container">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-[#310860]">SERVICIOS</h1>

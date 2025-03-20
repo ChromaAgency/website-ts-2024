@@ -7,7 +7,7 @@ const Hero = () => {
     if (aboutSection) {
       const headerOffset = 70; 
       const elementPosition = aboutSection.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,

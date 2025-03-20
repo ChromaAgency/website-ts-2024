@@ -10,7 +10,7 @@ const Hero = () => {
     if (servicesSection) {
       const headerOffset = 70; // Adjust this value to control the padding from the top
       const elementPosition = servicesSection.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
       window.scrollTo({
         top: offsetPosition,
