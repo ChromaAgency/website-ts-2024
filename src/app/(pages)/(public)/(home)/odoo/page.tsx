@@ -18,18 +18,13 @@ const Company = () => {
   return (
     <div className="text-gray-700">
       <Hero />
-
       <About />
-
-      <Feature />
-
       <Counter />
+      <Feature />
+      {/* <Team teamMembers={teamMembers} /> */}
+      {/* <Client /> */}
 
-      <Team teamMembers={teamMembers} />
-
-      <Client />
-
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

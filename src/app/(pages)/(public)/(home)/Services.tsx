@@ -23,7 +23,7 @@ const Services = ({ services }: { services: Service[] }) => {
                   {service.icon}
                 </div>
                 <h4 className="text-[#310860] font-medium my-5">{service.title}</h4>
-                <p className="text-[#696969]">{service.description}</p>
+                <p className="text-slate-900">{service.description}</p>
               </div>
             )
           })}

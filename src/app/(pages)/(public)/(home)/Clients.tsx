@@ -1,11 +1,6 @@
 import Image from 'next/image'
 
 //images
-import amazon from '@/assets/images/brands/amazon.svg'
-import google from '@/assets/images/brands/google.svg'
-import paypal from '@/assets/images/brands/paypal.svg'
-import spotify from '@/assets/images/brands/spotify.svg'
-import shopify from '@/assets/images/brands/shopify.svg'
 import whiteWave from '@/assets/images/shapes/white-wave.svg'
 
 const Clients = () => {
@@ -22,7 +17,7 @@ const Clients = () => {
           <h1 className="text-3xl font-semibold text-[#310860]">
             Trabajamos con las ultimas tecnologías para crear aplicaciones y sitios web de alta calidad.
           </h1>
-          <p className="text-slate-600">
+          <p className="text-slate-900">
             Con nuestro conjunto de tecnologías creamos sitios web y aplicaciones de alta calidad.
             Permitiendote estar actualizado con las ultimas tendencias en tecnología. 
             No solo eso, sino que estamos en constante busqueda de nuevas tecnologías para mejorar nuestros productos y para satisfacer las necesidades de tu negocio.
@@ -30,18 +25,18 @@ const Clients = () => {
         </div>
         <div className="flex flex-wrap items-center justify-around mt-12 gap-5">
           <Image alt="algolia" src="/assets/images/brands/algolia.png" height={38} width={112} className="w-28"/>
-          <Image alt="" src={google} height={38} width={112} className="w-28" />
-          <Image alt="" src={paypal} height={38} width={112} className="w-28" />
+          <Image alt="supabase" src="/assets/images/brands/supabase.png" height={38} width={112} className="w-28" />
+          <Image alt="vercel" src="/assets/images/brands/vercel.png" height={38} width={112} className="w-28" />
           <Image
-            alt=""
-            src={spotify}
+            alt="nextjs"
+            src="/assets/images/brands/nextjs.png"
             height={38}
             width={112}
             className="w-28"
           />
           <Image
-            alt=""
-            src={shopify}
+            alt="odoo"
+            src="/assets/images/brands/odoo.png"
             height={38}
             width={112}
             className="w-28"

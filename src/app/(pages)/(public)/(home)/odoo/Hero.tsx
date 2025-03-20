@@ -1,9 +1,24 @@
+'use client'
 import coworking1 from '@/assets/images/hero/coworking1.jpg'
 
 const Hero = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      const headerOffset = 70; 
+      const elementPosition = aboutSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <>
-      <section className="pt-36 pb-24 relative">
+      <section className="pt-36 pb-24 relative bg-[#2ee0ca]/10">
         <div className="container">
           <div className="text-center">
             <h1 className="text-3xl/tight sm:text-4xl/tight lg:text-5xl/tight font-semibold mb-5 text-[#8a50bc] ">
@@ -13,29 +28,21 @@ const Hero = () => {
               </span>
               &nbsp;?
             </h1>
-            <p className="sm:text-lg text-gray-500">
+            <p className="sm:text-lg text-gray-700">
             Odoo no es solo un software; es una inversión estratégica para empresas que buscan operar de manera inteligente y mantenerse competitivas en mercados dinámicos.
             </p>
           </div>
         </div>
       </section>
-      <section>
-        <span className="flex justify-center items-center relative z-20 translate-y-1/2">
-          <div className="bg-[#8a50bc] text-white rounded-md text-sm font-semibold flex-none shadow shadow-primary/20 cursor-pointer hover:shadow-lg hover:shadow-primary/30 focus:shadow-none focus:outline focus:outline-primary/30 uppercase px-16 py-3">
+      <section className="bg-[#2ee0ca]/10" >
+        <span className="flex justify-center  items-center relative z-20 translate-y-1/2">
+          <button 
+            onClick={scrollToAbout}
+            className="bg-[#8a50bc]  text-white rounded-md text-sm font-semibold flex-none shadow shadow-primary/20 cursor-pointer hover:shadow-lg hover:shadow-primary/30 focus:shadow-none focus:outline focus:outline-primary/30 uppercase px-16 py-3"
+          >
             Leer más
-          </div>
+          </button>
         </span>
-
-        {/*
-          The react-scroll-parallax does not support NextJs versions over v13.4.1, 
-          you can uncomment and use the below HeroBanner component if you wish to 
-          use it by downgrading the NextJs version, or after 
-          react-scroll-parallax fixes the issue.
-          And if you decide to use it, make sure to uncomment the ParallaxProvider
-          from /components/AppProviders.tsx
-        */}
-
-        {/* <HeroBanner /> */}
 
         <div
           className="flex items-center md:py-80 py-44"

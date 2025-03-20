@@ -7,7 +7,7 @@ import whiteWave from '@/assets/images/shapes/white-wave.svg'
 
 const Counter = () => {
   return (
-    <section className="bg-gradient-to-r from-gray-200/50 to-gray-100/50 relative lg:py-24 py-16">
+    <section className="bg-[#2ee0ca]/10 relative lg:py-24 py-16">
       <div className="absolute top-0 inset-x-0 hidden sm:block">
         <Image
           width={1905}
