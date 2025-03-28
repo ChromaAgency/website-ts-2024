@@ -23,7 +23,7 @@ const ContactUs = () => {
               >
                 <iframe
                   className="w-full h-[500px]"
-                  src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6030.418742494061!2d-111.34563870463673!3d26.01036670629853!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1471908546569"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.609210287447!2d-58.37348811093597!3d-34.63931458959971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334b385abad0b%3A0xf184ebbd4e8b40f9!2sOlavarr%C3%ADa%201150%2C%20C1265%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires%2C%20Argentina!5e0!3m2!1ses-419!2sco!4v1738284725425!5m2!1ses-419!2sco"
                   frameBorder={0}
                 />
               </div>
@@ -89,9 +89,9 @@ const ContactUs = () => {
               </svg>
             </span>
             <div className="grow">
-              <h5 className="text-base text-gray-700">Phone</h5>
+              <h5 className="text-base text-gray-700">Teléfono</h5>
               <a href="#" className="text-gray-500 my-1">
-                +00 123 456 7890
+                +54 (11) 70790150
               </a>
             </div>
           </div> */}
@@ -116,7 +116,7 @@ const ContactUs = () => {
             </span>
             <div className="grow">
               <h5 className="text-base text-gray-700">Dirección</h5>
-              <Link href="" className="text-gray-500 my-1">
+              <Link href="https://maps.app.goo.gl/a7RA7kfxV1QMg1LW7" className="text-gray-500 my-1">
                Olavarria 1150, CABA, Argentina.
               </Link>
             </div>

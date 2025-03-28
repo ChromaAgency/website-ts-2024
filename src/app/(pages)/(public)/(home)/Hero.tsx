@@ -1,15 +1,12 @@
 'use client'
-import Link from 'next/link'  
-import { FaArrowDownLong } from 'react-icons/fa6'  
-import Image from 'next/image'  
-import BackgroundImage from '@/assets/images/hero/Chroma_LogoWhiteBackground.png'  
+import macPic from '@/assets/images/hero/macPic.jpeg'
 
-const Hero = () => {  
-  const scrollToServices = () => {
-    const servicesSection = document.getElementById('services');
-    if (servicesSection) {
-      const headerOffset = 70; // Adjust this value to control the padding from the top
-      const elementPosition = servicesSection.getBoundingClientRect().top;
+const Hero = () => {
+  const scrollToAbout = () => {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      const headerOffset = 70; 
+      const elementPosition = aboutSection.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
       window.scrollTo({
@@ -19,54 +16,46 @@ const Hero = () => {
     }
   };
 
-  return (  
-    <section className="py-44 relative bg-[#2ee0ca]/10">  
-      <div className=" hero-with-shapes">  
-        <div className="shape1" />  
-        <div className="shape2" />  
-        <div className="shape3" />  
-        <div className="container">  
-          <div className="flex justify-between items-center">  
-            <div>  
-              <h1 className="md:text-7xl text-3xl text-[#310860] font-medium my-5">  
-                CHROMA&nbsp;  
-                <span className="relative after:bg-[#2ee0ca] md:after:h-6 after:h-4 after:w-full after:inset-x-0 after:bottom-0 after:absolute after:-z-10">  
-                  AGENCY  
-                </span>  
-              </h1>  
-              <h2 className="w-3/4 text-4xl font-medium mt-6 mb-20 text-[#8a50bc]">  
-                DIGITALIZACIÓN DE TU EMPRESA.  
-              </h2>  
-              
-              <div className="flex flex-wrap items-center gap-5">              
-                <button  
-                  onClick={scrollToServices}
-                  className="flex gap-1 items-center py-3 px-6 rounded border border-[#310860] text-white bg-[#310860] hover:shadow-lg hover:text-[#310860] hover:bg-white hover:shadow-[#474747] focus:outline focus:outline-black/50 transition-all duration-500"  
-                >  
-                  <FaArrowDownLong /> Servicios  
-                </button>  
-              
-                <Link  
-                  href="/contact-us"  
-                  className="flex gap-1 items-center py-3 px-6 rounded border border-[#8a50bc] text-white bg-[#8a50bc] hover:shadow-lg hover:text-[#310860] hover:bg-white hover:shadow-[#474747] focus:outline focus:outline-black/50 transition-all duration-500"  
-                >  
-                  Contáctanos  
-                </Link>  
-              </div>  
-            </div>  
+  return (
+    <>
+      <section className="pt-36 pb-24 relative bg-[#2ee0ca]/10">
+        <div className="container">
+          <div className="text-center">
+            <h1 className="text-3xl/tight sm:text-4xl/tight lg:text-5xl/tight font-semibold mb-5 text-[#8a50bc] ">
+            ¿QUE ES &nbsp;
+              <span className="relative z-0 after:bg-[#2ee0ca] after:-z-10 after:absolute md:after:h-6 sm:after:h-5 after:h-4 after:w-full after:bottom-0 after:end-0">
+                ODOO
+              </span>
+              &nbsp;?
+            </h1>
+            <p className="sm:text-lg text-gray-700">
+            Odoo no es solo un software; es una inversión estratégica para empresas que buscan operar de manera inteligente y mantenerse competitivas en mercados dinámicos.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="bg-[#2ee0ca]/10" >
+        <span className="flex justify-center  items-center relative z-20 translate-y-1/2">
+          <button 
+            onClick={scrollToAbout}
+            className="bg-[#8a50bc]  text-white rounded-md text-sm font-semibold flex-none shadow shadow-primary/20 cursor-pointer hover:shadow-lg hover:shadow-primary/30 focus:shadow-none focus:outline focus:outline-primary/30 uppercase px-16 py-3"
+          >
+            Leer más
+          </button>
+        </span>
 
-            <Image  
-              className="max-w-full h-auto object-contain"  
-              src={BackgroundImage}  
-              width={800}  
-              height={800}  
-              alt="Chroma Agency Logo"  
-            />  
-          </div>  
-        </div>  
-      </div>  
-    </section>  
-  )  
-}  
+        <div
+          className="flex items-center md:py-80 py-44"
+          style={{
+            background: `url(${macPic.src})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+          }}
+        ></div>
+      </section>
+    </>
+  )
+}
 
 export default Hero
