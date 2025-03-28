@@ -14,7 +14,6 @@ const Contact = () => {
 
       <ContactUs />
 
-      <Footer3 />
     </>
   )
 }
