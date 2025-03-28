@@ -1,5 +1,5 @@
 'use client'
-import coworking1 from '@/assets/images/hero/coworking1.jpg'
+import macPic from '@/assets/images/hero/macPic.jpeg'
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -47,8 +47,10 @@ const Hero = () => {
         <div
           className="flex items-center md:py-80 py-44"
           style={{
-            background: `url(${coworking1.src})`,
+            background: `url(${macPic.src})`,
             backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
           }}
         ></div>
       </section>

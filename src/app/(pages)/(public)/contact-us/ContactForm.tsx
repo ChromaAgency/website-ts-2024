@@ -3,30 +3,53 @@ import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { FormInput, FormTextArea } from '@/components'
+import { useState } from 'react'
 
 const ContactForm = () => {
+  const [emailError, setEmailError] = useState('')
+
   // form validation schema
   const contactUsSchema = yup.object().shape({
     fname: yup.string().required('Por favor ingrese su nombre'),
     lname: yup.string().required('Por favor ingrese su apellido'),
+    company: yup.string(),
     email: yup
       .string()
       .email('Por favor ingrese un correo electrónico válido')
       .required('Por favor ingrese su correo electrónico'),
+    confirmEmail: yup
+      .string()
+      .oneOf([yup.ref('email'), null], 'Los emails deben coincidir')
+      .required('Por favor confirme su correo electrónico'),
     message: yup.string().required('Por favor ingrese su mensaje'),
   })
 
-  const { control, handleSubmit, reset } = useForm({
+  const { control, handleSubmit, reset, watch } = useForm({
     resolver: yupResolver(contactUsSchema),
   })
 
+  // Función para validar emails coincidentes
+  const validateEmails = () => {
+    const email = watch('email')
+    const confirmEmail = watch('confirmEmail')
+    
+    if (email && confirmEmail && email !== confirmEmail) {
+      setEmailError('Los emails no coinciden')
+      return false
+    }
+    setEmailError('')
+    return true
+  }
+
+  const onSubmit = (data) => {
+    if (!validateEmails()) return
+    
+    alert("Su formulario ha sido enviado con éxito, lo contactaremos pronto!")
+    reset()
+  }
+
   return (
-    <form
-      onSubmit={handleSubmit(() => {
-        alert("Su pedido ha sido recibido, le contactaremos pronto!")
-        reset()
-      })}
-    >
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div className="flex gap-6">
         <div className="md:w-1/2">
           <FormInput
@@ -53,17 +76,48 @@ const ContactForm = () => {
           />
         </div>
       </div>
+      <div className="flex gap-6">
+        <div className="md:w-1/2">
+          <FormInput
+            label="Nombre de empresa"
+            name="company"
+            type="text"
+            className="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0"
+            placeholder="Nombre de empresa"
+            labelClassName="block text-sm font-medium mb-1 text-gray-600"
+            containerClassName="mb-5"
+            control={control}
+          />
+        </div>
+      </div>
+      <div className="flex gap-6">
+        <div className="md:w-1/2">
+          <FormInput
+            label="Email"
+            name="email"
+            type="email"
+            className="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0"
+            placeholder="Su correo electrónico"
+            labelClassName="block text-sm font-medium mb-1 text-gray-600"
+            containerClassName="mb-5"
+            control={control}
+          />
+        </div>
+        <div className="md:w-1/2">
+          <FormInput
+            label="Confirmar Email"
+            name="confirmEmail"
+            type="email"
+            className="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0"
+            placeholder="Confirme su correo electrónico"
+            labelClassName="block text-sm font-medium mb-1 text-gray-600"
+            containerClassName="mb-5"
+            control={control}
+          />
+          {emailError && <p className="text-red-500 text-xs mt-1">{emailError}</p>}
+        </div>
+      </div>
       <div className="w-full">
-        <FormInput
-          label="Email"
-          name="email"
-          type="email"
-          className="py-2 px-4 leading-6 block w-full border-gray-300 rounded text-sm focus:border-gray-300 focus:ring-0"
-          placeholder="Su correo electrónico"
-          labelClassName="block text-sm font-medium mb-1 text-gray-600"
-          containerClassName="mb-5"
-          control={control}
-        />
         <FormTextArea
           label="Mensaje"
           name="message"

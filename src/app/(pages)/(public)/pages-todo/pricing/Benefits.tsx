@@ -1,5 +1,5 @@
 // types
-import { Benefit } from '../career/types'
+import { Benefit } from '../../(home)/desarrollos/types'
 
 const Benefits = ({ benefits }: { benefits: Benefit[] }) => {
   return (

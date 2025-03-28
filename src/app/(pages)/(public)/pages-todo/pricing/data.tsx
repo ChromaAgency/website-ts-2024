@@ -1,6 +1,6 @@
 // types
 import { PlanItem } from './types'
-import { Benefit } from '../career/types'
+import { Benefit } from '../../(home)/desarrollos/types'
 
 const plans: PlanItem[] = [
   {

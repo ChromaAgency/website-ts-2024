@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { FaArrowRight } from 'react-icons/fa6'
 
 //images
-import img1 from '@/assets/images/photos/14.jpg'
+import img1 from '@/assets/images/photos/floorPic.jpeg'
 
 const Feature = () => {
   return (
@@ -27,7 +27,7 @@ const Feature = () => {
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <Image width={516} height={516} src={img1.src} alt="photo-3" />
+            <Image width={516} height={200} src={img1.src} alt="photo-3"/>
           </div>
         </div>
       </div>

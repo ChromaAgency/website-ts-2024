@@ -5,7 +5,7 @@ import whiteWave from '@/assets/images/shapes/white-wave.svg'
 
 const Clients = () => {
   return (
-    <section className="py-32 relative bg-[#2ee0ca]/10 ">
+    <section className="py-32 relative bg-white">
       <div className="absolute top-0 inset-x-0 hidden sm:block">
         <Image src={whiteWave} alt="svg" className="w-full -scale-x-100" />
       </div>

@@ -27,9 +27,9 @@ const Agency = () => {
 
       <Clients />
 
-      <Blog blogs={blogPosts} />
+      {/* <Blog blogs={blogPosts} /> */}
 
-      <Vacancies jobDetails={jobDetails} />
+      {/* <Vacancies jobDetails={jobDetails} /> */}
 
     </>
   )

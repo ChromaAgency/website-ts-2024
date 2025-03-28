@@ -52,7 +52,7 @@ const Footer = () => {
                 })}
               <div>
                 <div className="flex flex-col gap-3">
-                  <h5 className="mb-3">Escribinos</h5>
+                  <h5 className="mb-3 text-gray-800">Escribinos</h5>
                   <div className="text-gray-500/80">
                     <Link href="/">web@chroma.agency</Link>
                   </div>

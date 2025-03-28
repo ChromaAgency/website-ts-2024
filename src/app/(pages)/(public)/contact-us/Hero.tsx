@@ -1,11 +1,11 @@
 const Hero = () => {
   return (
-    <section className="bg-gray-100 lg:pt-28 sm:pb-36 pb-16 pt-36 relative">
+    <section className="bg-[#2ee0ca]/10 lg:pt-28 sm:pb-36 pb-16 pt-36 relative">
       <div className="container">
         <div className="flex justify-center">
           <div className="lg:w-7/12 text-center">
             <h1 className="text-5xl/relaxed text-[#8a50bc]">CONTÁCTANOS</h1>
-            <p className="mb-6 md:text-lg text-gray-500">
+            <p className="mb-6 md:text-lg text-gray-700">
               Completá el siguiente formulario y estaremos en contacto contigo
               lo antes posible.
             </p>
