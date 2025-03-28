@@ -31,6 +31,10 @@ const Footer = () => {
             <p className="text-gray-500/80 mt-5">
               Queretaro, México
             </p>
+            <p className="text-gray-500/80 mt-5">
+              Sync Industries LLC <br/>
+              Delaware, USA
+            </p>
           </div>
           <div className="xl:col-span-3 col-span-4 xl:mx-20">
             <div className="flex flex-col sm:flex-row gap-14 flex-wrap justify-between">
