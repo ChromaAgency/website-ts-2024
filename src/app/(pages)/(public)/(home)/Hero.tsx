@@ -1,21 +1,8 @@
-'use client'
 import Link from 'next/link'
 import { FaArrowDownLong } from 'react-icons/fa6'
 
 const Hero = () => {
-  const scrollToServices = () => {
-    const servicesSection = document.getElementById('services');
-    if (servicesSection) {
-      const headerOffset = 70; // Adjust this value to control the padding from the top
-      const elementPosition = servicesSection.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
 
   return (
     <section className="py-44 relative bg-[#2ee0ca]/10">
@@ -38,7 +25,6 @@ const Hero = () => {
 
               <div className="flex flex-wrap items-center gap-5">
                 <button
-                  onClick={scrollToServices}
                   className="flex gap-1 items-center py-3 px-6 rounded border border-[#310860] text-white bg-[#310860] hover:shadow-lg hover:text-[#310860] hover:bg-white hover:shadow-[#474747] focus:outline focus:outline-black/50 transition-all duration-500"
                 >
                   <FaArrowDownLong /> Servicios
