@@ -19,7 +19,7 @@ const ContactForm = () => {
       .required('Por favor ingrese su correo electrónico'),
     confirmEmail: yup
       .string()
-      .oneOf([yup.ref('email'), null], 'Los emails deben coincidir')
+      .oneOf([yup.ref('email')], 'Los emails deben coincidir')
       .required('Por favor confirme su correo electrónico'),
     message: yup.string().required('Por favor ingrese su mensaje'),
   })
@@ -41,7 +41,7 @@ const ContactForm = () => {
     return true
   }
 
-  const onSubmit = (data) => {
+  const onSubmit = (data:any) => {
     if (!validateEmails()) return
     
     alert("Su formulario ha sido enviado con éxito, lo contactaremos pronto!")
