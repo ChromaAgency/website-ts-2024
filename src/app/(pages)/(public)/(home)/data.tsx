@@ -31,7 +31,14 @@ const services: Service[] = [
     variant: 'bg-primary/20',
     title: 'Implementación de Odoo ERP.',
     description:
-      'Realizamos implementaciones de Odoo ERP para empresas, desde las ventas hasta la contabilidad, permitiendote centralizar toda tu empresa en un solo sistema. Nuestra experiencia asegura una implementación que mejora la eficiencia, reduce costos operativos y maximiza el potencial de Odoo en tu negocio.',
+      <>
+        Realizamos implementaciones de Odoo ERP para empresas, desde las ventas hasta la contabilidad, permitiendote centralizar toda tu empresa en un solo sistema.
+        <br />
+        <br />
+        Nuestra experiencia asegura una implementación que mejora la eficiencia, reduce costos operativos y maximiza el potencial de Odoo en tu negocio.
+      </>,
+    link: '/odoo',
+    buttonText: 'Saber más',
   },
   {
     icon: (
@@ -55,7 +62,14 @@ const services: Service[] = [
     variant: 'bg-orange-500/10',
     title: 'Desarrollos: Página WEB | Chatbots con IA | Aplicaciones webs y nativas.',
     description:
-      'Con soluciones a medida, integramos tecnología que se ajusta a vos, sin limitar tus operaciones ni comprometer tu forma de trabajar, optimizando procesos y alineándose con la estructura única de tu negocio.',
+    <>
+      Con soluciones a medida, integramos tecnología que se ajusta a vos, sin limitar tus operaciones ni comprometer tu forma de trabajar.
+      <br />
+      <br />
+      Optimizando así los procesos y la estructura única de tu negocio.
+    </>,
+    link: '/desarrollos',
+    buttonText: 'Saber más',
   },
   {
     icon: (
@@ -79,7 +93,14 @@ const services: Service[] = [
     variant: 'bg-green-500/10',
     title: 'Consultoria Empresarial.',
     description:
-      'Ofrecemos un servicio diseñado para ayudarte a estructurar tus procesos y maximizar la eficiencia operativa. Analizamos tus necesidades, identificamos áreas de mejora y desarrollamos estrategias personalizadas que impulsan el desempeño de tu empresa.',
+    <>
+      Ofrecemos un servicio diseñado para ayudarte a estructurar tus procesos y maximizar la eficiencia operativa.
+      <br />
+      <br />
+      Analizamos tus necesidades, identificamos áreas de mejora y desarrollamos estrategias personalizadas que impulsan el desempeño de tu empresa.
+    </>,
+    link: '/contact-us',
+    buttonText: 'Saber más',
   },
 ]
 

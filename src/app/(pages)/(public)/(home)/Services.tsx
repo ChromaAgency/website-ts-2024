@@ -1,4 +1,5 @@
 import { Service } from './types'
+import Link from 'next/link'
 
 const Services = ({ services }: { services: Service[] }) => {
   return (
@@ -12,7 +13,7 @@ const Services = ({ services }: { services: Service[] }) => {
             return (
               <div
                 key={idx}
-                className="p-6 hover:bg-white rounded-md hover:shadow-xl transition-all duration-500"
+                className="p-6 hover:bg-white rounded-md hover:shadow-xl transition-all duration-500 flex flex-col h-full text-left"
                 data-aos="fade-up"
                 data-aos-duration={500}
               >
@@ -21,14 +22,13 @@ const Services = ({ services }: { services: Service[] }) => {
                 >
                   {service.icon}
                 </div>
-                <h4 className="text-[#310860] font-medium my-5">{service.title}</h4>
-                <p className="text-slate-900">{service.description}</p>
-                <a 
-                  href="/contact-us"
-                  className="inline-block mt-4 px-6 py-2 bg-[#310860] text-white rounded-md hover:bg-[#4a1b8c] transition-colors duration-300"
-                >
-                  Saber más
-                </a>
+                <h4 className="text-[#310860] font-medium ">{service.title}</h4>
+                <div className="flex-grow">
+                  <p className="text-slate-900 my-10">{service.description}</p>
+                </div>
+                <Link href={service.link} className='inline-block px-6 py-2 bg-[#8a50bc] text-center text-white rounded-md hover:bg-[#4a1b8c] transition-colors duration-300'>
+                  <button>{service.buttonText}</button>
+                </Link>
               </div>
             )
           })}

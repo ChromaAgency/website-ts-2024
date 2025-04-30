@@ -1,5 +1,6 @@
 // types
-import { Benefit, GalleryItem, Vacancy } from './types'
+
+import { Benefit, GalleryItem, Vacancy, Feature } from './types'
 
 // images
 import img1 from '@/assets/images/photos/3.jpg'
@@ -11,7 +12,7 @@ const benefits: Benefit[] = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-primary"
+        className="w-8 h-8 text-[#8a50bc]"
         viewBox="0 0 24 24"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -27,14 +28,13 @@ const benefits: Benefit[] = [
         </g>
       </svg>
     ),
-    title: 'Relocation Support',
-    description:
-      "We'll help to move and get settled and handle the visa process for you",
+    title: 'Páginas web',
+    description: "Utilizamos las últimas tecnologías para desarrollar sitios web dinámicos, optimizados y adaptables. Garantizando alto rendimiento, experiencia de usuario eficiente y compatibilidad con múltiples dispositivos.",
   },
   {
     icon: (
       <svg
-        className="w-8 h-8 text-primary"
+        className="w-8 h-8 text-[#8a50bc]"
         viewBox="0 0 24 24"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -61,43 +61,14 @@ const benefits: Benefit[] = [
         </g>
       </svg>
     ),
-    title: 'Technology',
+    title: 'aplicaciones mobiles',
     description:
-      'A special training to get start with our technical stack by professionals',
+      'Desarrollamos aplicaciones para dispositivos móviles, optimizadas para iOS y Android. Utilizamos tecnologías como React Native para crear aplicaciones que ofrecen una experiencia de usuario eficiente y un rendimiento óptimo.',
   },
   {
     icon: (
       <svg
-        className="w-8 h-8 text-primary"
-        viewBox="0 0 24 24"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-      >
-        <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
-          <rect id="bound" x={0} y={0} width={24} height={24} />
-          <path
-            d="M4.3618034,10.2763932 L4.8618034,9.2763932 C4.94649941,9.10700119 5.11963097,9 5.30901699,9 L15.190983,9 C15.4671254,9 15.690983,9.22385763 15.690983,9.5 C15.690983,9.57762255 15.6729105,9.65417908 15.6381966,9.7236068 L15.1381966,10.7236068 C15.0535006,10.8929988 14.880369,11 14.690983,11 L4.80901699,11 C4.53287462,11 4.30901699,10.7761424 4.30901699,10.5 C4.30901699,10.4223775 4.32708954,10.3458209 4.3618034,10.2763932 Z M14.6381966,13.7236068 L14.1381966,14.7236068 C14.0535006,14.8929988 13.880369,15 13.690983,15 L4.80901699,15 C4.53287462,15 4.30901699,14.7761424 4.30901699,14.5 C4.30901699,14.4223775 4.32708954,14.3458209 4.3618034,14.2763932 L4.8618034,13.2763932 C4.94649941,13.1070012 5.11963097,13 5.30901699,13 L14.190983,13 C14.4671254,13 14.690983,13.2238576 14.690983,13.5 C14.690983,13.5776225 14.6729105,13.6541791 14.6381966,13.7236068 Z"
-            id="Combined-Shape"
-            fill="currentColor"
-            opacity="0.3"
-          />
-          <path
-            d="M17.369,7.618 C16.976998,7.08599734 16.4660031,6.69750122 15.836,6.4525 C15.2059968,6.20749878 14.590003,6.085 13.988,6.085 C13.2179962,6.085 12.5180032,6.2249986 11.888,6.505 C11.2579969,6.7850014 10.7155023,7.16999755 10.2605,7.66 C9.80549773,8.15000245 9.45550123,8.72399671 9.2105,9.382 C8.96549878,10.0400033 8.843,10.7539961 8.843,11.524 C8.843,12.3360041 8.96199881,13.0779966 9.2,13.75 C9.43800119,14.4220034 9.7774978,14.9994976 10.2185,15.4825 C10.6595022,15.9655024 11.1879969,16.3399987 11.804,16.606 C12.4200031,16.8720013 13.1129962,17.005 13.883,17.005 C14.681004,17.005 15.3879969,16.8475016 16.004,16.5325 C16.6200031,16.2174984 17.1169981,15.8010026 17.495,15.283 L19.616,16.774 C18.9579967,17.6000041 18.1530048,18.2404977 17.201,18.6955 C16.2489952,19.1505023 15.1360064,19.378 13.862,19.378 C12.6999942,19.378 11.6325049,19.1855019 10.6595,18.8005 C9.68649514,18.4154981 8.8500035,17.8765035 8.15,17.1835 C7.4499965,16.4904965 6.90400196,15.6645048 6.512,14.7055 C6.11999804,13.7464952 5.924,12.6860058 5.924,11.524 C5.924,10.333994 6.13049794,9.25950479 6.5435,8.3005 C6.95650207,7.34149521 7.5234964,6.52600336 8.2445,5.854 C8.96550361,5.18199664 9.8159951,4.66400182 10.796,4.3 C11.7760049,3.93599818 12.8399943,3.754 13.988,3.754 C14.4640024,3.754 14.9609974,3.79949954 15.479,3.8905 C15.9970026,3.98150045 16.4939976,4.12149906 16.97,4.3105 C17.4460024,4.49950095 17.8939979,4.7339986 18.314,5.014 C18.7340021,5.2940014 19.0909985,5.62999804 19.385,6.022 L17.369,7.618 Z"
-            id="C"
-            fill="currentColor"
-          />
-        </g>
-      </svg>
-    ),
-    title: 'Growth budget',
-    description:
-      'A specific budget for your professionals growth which you spend on throughout the year',
-  },
-  {
-    icon: (
-      <svg
-        className="w-8 h-8 text-primary"
+        className="w-8 h-8 text-[#8a50bc]"
         viewBox="0 0 24 24"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -119,14 +90,14 @@ const benefits: Benefit[] = [
         </g>
       </svg>
     ),
-    title: 'Team activities & retreats',
+    title: 'Implementación de chatbots interactivos',
     description:
-      "Many team building activities and retreat every quarter, so you don't get bored",
+      "Desarrollamos e implementamos chatbots inteligentes a través de nuestra propia plataforma. ",
   },
   {
     icon: (
       <svg
-        className="w-8 h-8 text-primary"
+        className="w-8 h-8 text-[#8a50bc]"
         viewBox="0 0 24 24"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -142,14 +113,16 @@ const benefits: Benefit[] = [
         </g>
       </svg>
     ),
-    title: 'Work from anywhere',
+    title: 'Adaptabilidad',
     description:
-      'Work from anywhere you like. We offer remote working to all the employees',
+      'Nuestros bots se adaptan a distintos canales y necesidades, interactuando de forma natural y eficiente, permitiendo automatizar la atención al cliente, brindar respuestas rápidas y mejorar la experiencia del usuario. ',
   },
+]
+const features: Feature[] = [
   {
-    icon: (
+    deviceIcon: (
       <svg
-        className="w-8 h-8 text-primary"
+        className="w-10 h-10 mx-auto text-black"
         viewBox="0 0 24 24"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -158,44 +131,115 @@ const benefits: Benefit[] = [
         <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
           <rect id="bound" x={0} y={0} width={24} height={24} />
           <path
-            d="M22,7 L22,9 L19,9 C18.4477153,9 18,9.44771525 18,10 L18,13 C18,13.5522847 18.4477153,14 19,14 L22,14 L22,16 L19,16 C17.3431458,16 16,14.6568542 16,13 L16,10 C16,8.34314575 17.3431458,7 19,7 L22,7 Z"
-            id="Path-52"
+            d="M6,8 L6,16 L18,16 L18,8 L6,8 Z M20,16 L21.381966,16 C21.7607381,16 22.1070012,16.2140024 22.2763932,16.5527864 L22.5,17 C22.6706654,17.3413307 22.5323138,17.7563856 22.190983,17.927051 C22.0950363,17.9750244 21.9892377,18 21.881966,18 L2.11803399,18 C1.73641461,18 1.42705098,17.6906364 1.42705098,17.309017 C1.42705098,17.2017453 1.45202663,17.0959467 1.5,17 L1.7236068,16.5527864 C1.89299881,16.2140024 2.23926193,16 2.61803399,16 L4,16 L4,8 C4,6.8954305 4.8954305,6 6,6 L18,6 C19.1045695,6 20,6.8954305 20,8 L20,16 Z"
+            id="Combined-Shape"
             fill="currentColor"
-            opacity="0.3"
-            transform="translate(19.000000, 11.500000) scale(-1, 1) translate(-19.000000, -11.500000) "
           />
-          <path
-            d="M4.75777452,5 C5.56503586,3.79401426 6.93979195,3 8.5,3 C10.0602081,3 11.4349641,3.79401426 12.2422255,5 L4.75777452,5 Z"
+          <polygon
             id="Combined-Shape"
             fill="currentColor"
             opacity="0.3"
-          />
-          <path
-            d="M7,5 C7,2.790861 8.790861,1 11,1 C13.209139,1 15,2.790861 15,5 L7,5 Z"
-            id="Combined-Shape"
-            fill="currentColor"
-            opacity="0.3"
-          />
-          <path
-            d="M12.0500091,5 C12.2816442,3.85887984 13.290521,3 14.5,3 C15.709479,3 16.7183558,3.85887984 16.9499909,5 L12.0500091,5 Z"
-            id="Combined-Shape"
-            fill="currentColor"
-            opacity="0.3"
-          />
-          <path
-            d="M8,8 L8,8 C8.55228475,8 9,8.44771525 9,9 L9,18 C9,18.5522847 8.55228475,19 8,19 L8,19 C7.44771525,19 7,18.5522847 7,18 L7,9 C7,8.44771525 7.44771525,8 8,8 Z M13,8 L13,8 C13.5522847,8 14,8.44771525 14,9 L14,18 C14,18.5522847 13.5522847,19 13,19 L13,19 C12.4477153,19 12,18.5522847 12,18 L12,9 C12,8.44771525 12.4477153,8 13,8 Z M4.06055214,5 L16.9394479,5 C17.4917326,5 17.9394479,5.44771525 17.9394479,6 C17.9394479,6.01958668 17.9388724,6.03916914 17.9377222,6.05872202 L17.1107386,20.117444 C17.0485547,21.1745693 16.1731425,22 15.1141898,22 L5.88581016,22 C4.82685754,22 3.95144525,21.1745693 3.88926141,20.117444 L3.06227777,6.05872202 C3.02984649,5.50739031 3.4504984,5.0341569 4.00183012,5.00172563 C4.021383,5.00057546 4.04096546,5 4.06055214,5 Z"
-            id="Combined-Shape"
-            fill="currentColor"
+            points="6 8 6 16 18 16 18 8"
           />
         </g>
       </svg>
     ),
-    title: 'Work/life balance',
-    description:
-      'Flexible work hours gives you complete balance with your personal and professional life.',
+    deviceName: 'Windows',
+  },
+  {
+    deviceIcon: (
+      <svg
+        className="w-10 h-10 mx-auto text-black"
+        viewBox="0 0 24 24"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+      >
+        <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+          <rect id="bound" x={0} y={0} width={24} height={24} />
+          <path
+            d="M5,6 L19,6 C19.5522847,6 20,6.44771525 20,7 L20,17 L4,17 L4,7 C4,6.44771525 4.44771525,6 5,6 Z"
+            id="Combined-Shape"
+            fill="currentColor"
+          />
+          <rect
+            id="Rectangle"
+            fill="currentColor"
+            opacity="0.3"
+            x={1}
+            y={18}
+            width={22}
+            height={1}
+            rx="0.5"
+          />
+        </g>
+      </svg>
+    ),
+    deviceName: 'Mac',
+  },
+  {
+    deviceIcon: (
+      <svg
+        className="w-10 h-10 mx-auto text-black"
+        viewBox="0 0 24 24"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+      >
+        <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+          <rect id="bound" x={0} y={0} width={24} height={24} />
+          <rect
+            id="Rectangle-7-Copy"
+            fill="currentColor"
+            x={2}
+            y={5}
+            width={19}
+            height={4}
+            rx={1}
+          />
+          <rect
+            id="Rectangle-7-Copy-4"
+            fill="currentColor"
+            opacity="0.3"
+            x={2}
+            y={11}
+            width={19}
+            height={10}
+            rx={1}
+          />
+        </g>
+      </svg>
+    ),
+    deviceName: 'Browser',
+  },
+  {
+    deviceIcon: (
+      <svg
+        className="w-10 h-10 mx-auto text-black"
+        viewBox="0 0 24 24"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+      >
+        <g stroke="none" strokeWidth={1} fill="none" fillRule="evenodd">
+          <rect id="bound" x={0} y={0} width={24} height={24} />
+          <path
+            d="M7.5,4 L7.5,19 L16.5,19 L16.5,4 L7.5,4 Z M7.71428571,2 L16.2857143,2 C17.2324881,2 18,2.8954305 18,4 L18,20 C18,21.1045695 17.2324881,22 16.2857143,22 L7.71428571,22 C6.76751186,22 6,21.1045695 6,20 L6,4 C6,2.8954305 6.76751186,2 7.71428571,2 Z"
+            id="Combined-Shape"
+            fill="currentColor"
+          />
+          <polygon
+            id="Combined-Shape"
+            fill="currentColor"
+            opacity="0.3"
+            points="7.5 4 7.5 19 16.5 19 16.5 4"
+          />
+        </g>
+      </svg>
+    ),
+    deviceName: 'Mobile',
   },
 ]
-
 const gallery: GalleryItem[] = [
   {
     id: 3,
@@ -260,4 +304,4 @@ const vacancies: Vacancy[] = [
   },
 ]
 
-export { benefits, gallery, vacancies }
+export { benefits, gallery, vacancies, features }

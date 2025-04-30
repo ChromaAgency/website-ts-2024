@@ -2,10 +2,12 @@ import { ReactNode } from 'react'
 import { StaticImageData } from 'next/image'
 
 export type Service = {
-  icon: ReactNode
+  icon: ReactNode 
   variant: string
   title: string
-  description: string
+  description: React.ReactNode
+  link: string
+  buttonText: string
 }
 
 export type BlogPost = {
