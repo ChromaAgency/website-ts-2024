@@ -8,7 +8,7 @@ import Footer from '@/components/common/Footer'
 import Features from './Features'
 
 //data
-import { benefits, vacancies,features } from './data'
+import { benefits } from './data'
 
 export const metadata: Metadata = {
   title: 'Desarrollos',
@@ -20,7 +20,7 @@ const career = () => {
       <div className="text-gray-800">
         <Hero />
         <div id="features">
-          <Features features={features} />
+          <Features  />
         </div>
         <div id="benefits">
           <Benefits benefits={benefits} />
