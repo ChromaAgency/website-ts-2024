@@ -5,12 +5,13 @@ import Culture from './Culture'
 import Hero from './Hero'
 import Vacancies from './Vacancies'
 import Footer from '@/components/common/Footer'
+import Features from './Features'
 
 //data
-import { benefits, vacancies } from './data'
+import { benefits, vacancies,features } from './data'
 
 export const metadata: Metadata = {
-  title: 'Career Landing',
+  title: 'Desarrollos',
 }
 
 const career = () => {
@@ -18,14 +19,12 @@ const career = () => {
     <>
       <div className="text-gray-800">
         <Hero />
-
-        <Benefits benefits={benefits} />
-
-        <Culture />
-
-        <Vacancies vacancies={vacancies} />
-
-        <CTA />
+        <div id="features">
+          <Features features={features} />
+        </div>
+        <div id="benefits">
+          <Benefits benefits={benefits} />
+        </div>
 
         <Footer />
       </div>

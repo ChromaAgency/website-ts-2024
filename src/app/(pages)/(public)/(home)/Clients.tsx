@@ -10,7 +10,7 @@ const Clients = () => {
         <Image src={whiteWave} alt="svg" className="w-full -scale-x-100" />
       </div>
       <div className="container relative">
-        <span className="text-sm font-medium py-1 px-3 rounded-full text-[#8a50bc] bg-primary/10">
+        <span className="text-sm bg-[#8a50bc]/40 text-[#310860] rounded-full px-3 py-1">
           Tecnologías utilizadas. 
         </span>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-5">
@@ -19,7 +19,9 @@ const Clients = () => {
           </h1>
           <p className="text-slate-900">
             Con nuestro conjunto de tecnologías creamos sitios web y aplicaciones de alta calidad.
+            <br/><br/>
             Permitiendote estar actualizado con las ultimas tendencias en tecnología. 
+            <br/><br/>
             No solo eso, sino que estamos en constante busqueda de nuevas tecnologías para mejorar nuestros productos y para satisfacer las necesidades de tu negocio.
           </p>
         </div>

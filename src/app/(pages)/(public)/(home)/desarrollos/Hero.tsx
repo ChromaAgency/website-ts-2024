@@ -1,34 +1,64 @@
+'use client'
 import Image from 'next/image'
 import { FaArrowRight } from 'react-icons/fa6'
 
 //images
-import img1 from '@/assets/images/photos/16.jpg'
-import img2 from '@/assets/images/photos/14.jpg'
-import img3 from '@/assets/images/photos/15.jpg'
 
 const Hero = () => {
+  const scrollToComponents = (componentId: string) => {
+    const Section = document.getElementById(componentId);
+    if (Section) {
+      const headerOffset = 70; 
+      const elementPosition = Section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <section className="bg-gradient-to-t from-gray-200/70 relative">
+    <section className="bg-gradient-to-t bg-[#2ee0ca]/10 relative">
       <section className="relative py-16 sm:py-20 md:py-40">
         <div className="container">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 items-center">
             <div className="order-2 lg:order-1">
               <div className="text-center lg:text-start">
-                <h1 className="text-3xl/tight sm:text-4xl/tight lg:text-5xl/tight font-semibold mb-7">
-                  Let&apos;s work&nbsp;
-                  <span className="relative z-0 after:bg-yellow-100 after:-z-10 after:absolute after:h-6 after:w-full after:bottom-0 after:end-0">
-                    together
+                <h1 className="text-3xl/tight sm:text-4xl/tight lg:text-5xl/tight font-semibold mb-5 text-[#310860] uppercase">
+                  Desarrollos hechos a&nbsp;
+                  <span className="relative z-0 after:bg-[#2ee0ca] after:-z-10 after:absolute after:h-6 after:w-full after:bottom-0 after:end-0">
+                    medida.
                   </span>
-                  . Join Prompt!
                 </h1>
-                <p className="text-gray-500 leading-relaxed lg:w-3/4">
-                  We&apos;re always open for new creative, analytical and
-                  technical minds to join our team. Search for the suitable job.
+                <p className="text-gray-700 leading-relaxed lg:w-3/4">
+                Ofrecemos desarrollos tecnológicos adaptables y funcionales, creados por un equipo de profesionales en constante formación.
                 </p>
                 <div className="mt-10 flex items-center justify-center lg:justify-start">
-                  <button className="flex items-center gap-3 bg-black/70 text-white rounded-md text-sm font-semibold flex-none shadow shadow-black hover:shadow-lg hover:shadow-black/30 focus:shadow-none focus:outline focus:outline-black/50 px-8 py-3">
-                    View All Openings
-                    <FaArrowRight />
+                <button 
+                    onClick={() => scrollToComponents('features')} 
+                    className="mr-5 flex items-center gap-3 bg-[#2ee0ca] text-black/70 rounded-md text-md font-semibold flex-none shadow shadow-[#2ee0ca] hover:shadow-lg hover:shadow-[#2ee0ca]/30 focus:shadow-none focus:outline focus:outline-[#2ee0ca]/50 px-8 py-3"
+                  >
+                    Modulos ODOO
+                    <FaArrowRight/>
+                  </button>
+                  <button 
+                    onClick={() => scrollToComponents('benefits')} 
+                    className="flex items-center gap-3 bg-[#8a50bc] text-white rounded-md text-sm font-semibold flex-none shadow shadow-[#8a50bc] hover:shadow-lg hover:shadow-[#8a50bc]/30 focus:shadow-none focus:outline focus:outline-[#8a50bc]/50 px-8 py-3"
+                  >
+                    Aplicaciones Web
+                    <FaArrowRight/>
+                  </button>
+
+                </div>
+                <div className="mt-10 flex items-center justify-center lg:justify-start">
+                  <button 
+                    onClick={() => scrollToComponents('benefits')} 
+                    className="flex items-center gap-3 bg-[#310860] text-white rounded-md text-sm font-semibold flex-none shadow shadow-[#8a50bc] hover:shadow-lg hover:shadow-[#8a50bc]/30 focus:shadow-none focus:outline focus:outline-[#8a50bc]/50 px-8 py-3"
+                  >
+                    Chatbots con IA
+                    <FaArrowRight/>
                   </button>
                 </div>
               </div>
@@ -39,7 +69,7 @@ const Hero = () => {
                   <Image
                     width={250}
                     height={170}
-                    src={img1}
+                    src="/assets/images/tableImage.jpeg"
                     alt="photo-12"
                     className="border-[6px] border-white bg-white shadow-md"
                   />
@@ -50,7 +80,7 @@ const Hero = () => {
                       <Image
                         width={250}
                         height={250}
-                        src={img2}
+                        src="/assets/images/lobbyImage.jpeg"
                         alt="photo-14"
                         className="border-[6px] border-white bg-white shadow-md"
                       />
@@ -59,7 +89,7 @@ const Hero = () => {
                       <Image
                         width={250}
                         height={250}
-                        src={img3}
+                        src="/assets/images/conferenceRoomImage.jpeg" 
                         alt="photo-15"
                         className="border-[6px] border-white bg-white shadow-md"
                       />
