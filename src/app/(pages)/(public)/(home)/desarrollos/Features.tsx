@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { FaArrowRight } from 'react-icons/fa6'
 
-import { Feature } from './data'
+import { Feature } from './types'
 
 import desktop from '@/assets/images/hero/desktop.png'
 import desktop1 from '@/assets/images/features/desktop1.gif'
