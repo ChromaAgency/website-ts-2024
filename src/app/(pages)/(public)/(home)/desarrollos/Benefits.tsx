@@ -5,20 +5,22 @@ const Benefits = ({ benefits }: { benefits: Benefit[] }) => {
   return (
     <section className="lg:py-24 py-16">
       <div className="container">
-        <div className="text-center">
-          <span className="text-sm font-medium py-1 px-3 rounded-full text-primary bg-primary/10">
-            Benefits
+        <div className="text-center mb-12">
+          <span className="text-sm bg-[#8a50bc]/40 text-[#310860] rounded-full px-3 py-1">
+            Aplicaciones
           </span>
-          <h1 className="text-3xl/tight font-medium mt-3 mb-4">
-            We take care of our team
+          <h1 className="text-[#310860] text-3xl font-semibold mt-3 mb-4">
+            DESARROLLOS APLICACIONES
           </h1>
-          <p className="text-gray-500">Few benefits from working together</p>
         </div>
         <div className="mt-14">
-          <div className="grid md:grid-cols-2 gap-14 items-center">
-            {(benefits ?? []).map((benefit, idx) => {
-              return (
-                <div key={idx}>
+          <div className="grid md:grid-cols-2 gap-14 items-start">
+          <div>
+              <h2 className="text-[#310860] text-2xl font-semibold mb-6 text-center">
+                APLICACIONES WEB
+              </h2>
+              {(benefits ?? []).slice(0, 2).map((benefit, idx) => (
+                <div key={idx} className="mb-8">
                   <div
                     className="flex gap-6 items-center"
                     data-aos="fade-up"
@@ -30,13 +32,37 @@ const Benefits = ({ benefits }: { benefits: Benefit[] }) => {
                       </span>
                     </div>
                     <div>
-                      <h6 className="mb-2 font-medium">{benefit.title}</h6>
-                      <p className="text-gray-500">{benefit.description}</p>
+                      <h6 className="mb-2 font-medium uppercase text-[#8a50bc]">{benefit.title}</h6>
+                      <p className="text-gray-800">{benefit.description}</p>
                     </div>
                   </div>
                 </div>
-              )
-            })}
+              ))}
+            </div>
+            <div>
+              <h2 className="text-[#310860] text-2xl font-semibold mb-6 text-center">
+                CHATBOTS IA
+              </h2>
+              {(benefits ?? []).slice(2, 4).map((benefit, idx) => (
+                <div key={idx} className="mb-8">
+                  <div
+                    className="flex gap-6 items-center"
+                    data-aos="fade-up"
+                    data-aos-duration={300}
+                  >
+                    <div>
+                      <span className="h-16 w-16 bg-primary/10 rounded-md flex items-center justify-center">
+                        {benefit.icon}
+                      </span>
+                    </div>
+                    <div>
+                      <h6 className="mb-2 font-medium uppercase text-[#8a50bc]">{benefit.title}</h6>
+                      <p className="text-gray-800">{benefit.description}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

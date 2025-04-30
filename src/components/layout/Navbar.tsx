@@ -49,11 +49,11 @@ const Navbar = () => {
             <div className="lg:block hidden ms-auto">
               <AppMenu menuItems={getHorizontalMenuItems()} />
             </div> 
-            {/* <div className="lg:hidden flex items-center ms-auto px-2.5">
+            <div className="lg:hidden flex items-center ms-auto px-2.5">
               <button type="button" onClick={toggleOffcanvas}>
                 <FaBars size={24} />
               </button>
-            </div>  */}
+            </div> 
           </nav>
         </div>
       </header>

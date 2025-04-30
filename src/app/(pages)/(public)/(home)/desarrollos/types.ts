@@ -24,3 +24,10 @@ export type Vacancy = {
     type: string
   }[]
 }
+export type Feature = {
+  icon?: ReactNode
+  title?: string
+  description?: string
+  deviceIcon: ReactNode
+  deviceName: string
+}

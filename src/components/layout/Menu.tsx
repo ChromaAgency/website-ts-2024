@@ -50,54 +50,82 @@ const MenuItemWithChildren = ({
     setOpen(activeMenuItems!.includes(item.key))
   }, [activeMenuItems, item])
 
-  const toggleMenuItem = () => {
+  const toggleMenuItem = (e: React.MouseEvent) => {
+    e.stopPropagation() 
+    e.preventDefault()
     const status = !open
     setOpen(status)
     if (toggleMenu) toggleMenu(item, status)
   }
 
   return (
-    <li className={cn('hs-dropdown [--strategy:static] [--adaptive:none]  [--placement:right-top] relative ')}>
+    <li className={cn('hs-dropdown [--strategy:static] [--adaptive:none] [--placement:right-top] relative')}>
       <div
-        className={cn('hs-dropdown-toggle  flex justify-between items-center cursor-pointer py-1', activeMenuItems!.includes(item.key) && 'active', level==1 ?"px-1":"px-4")}
+        className={cn('flex justify-between items-center py-1', level === 1 ? "px-1" : "px-4")}
         aria-expanded={open}
-        onClick={toggleMenuItem}
         id={`hs-dropdown-${item.key}`}
         data-menu-key={item.key}
       >
-        <span className={cn("font-medium", activeMenuItems?.includes(item.key)?"text-primary":"text-gray-800 ")}>{item.label}</span>
-        {!item.badge && <span className={cn("transition-all ms-2 hs-dropdown-open:rotate-180", activeMenuItems?.includes(item.key)?"text-primary":"text-gray-800 ")}><FaChevronDown size={12} /></span>}
+        {/* Parent Link */}
+        {item.url ? (
+          <Link
+            href={item.url}
+            className={cn("font-medium flex-1", activeMenuItems?.includes(item.key) ? "text-[#8a50bc]" : "text-gray-800")}
+          >
+            {item.label}
+          </Link>
+        ) : (
+          <span
+            className={cn("font-medium flex-1 cursor-default", activeMenuItems?.includes(item.key) ? "text-[#8a50bc]" : "text-gray-800")}
+          >
+            {item.label}
+          </span>
+        )}
+
+        {/* Toggle arrow */}
+        {!item.badge && (
+          <button
+            type="button"
+            onClick={toggleMenuItem}
+            className={cn("ms-2 transition-all", open ? "rotate-180" : "", activeMenuItems?.includes(item.key) ? "text-[#8a50bc]" : "text-gray-800")}
+          >
+            <FaChevronDown size={12} />
+          </button>
+        )}
       </div>
-      <div className={cn('hs-dropdown-menu mt-0 transition-all z-10 duration hs-dropdown-open:opacity-100 origin-center absolute hidden', open && 'active', linkClassName, level!=1&&'left-full')}>
-        <ul
-          className={" bg-white rounded-lg shadow-lg border p-2 w-48 pt-2"}
-          aria-labelledby={`hs-dropdown-${item.key}`}
-        >
-          {(item.children ?? []).map((child) => {
-            return (
-              <Fragment key={child.key}>
-                {child.children ? (
-                  <MenuItemWithChildren
-                    item={child}
-                    level={level+1}
-                    toggleMenu={toggleMenu}
-                    activeMenuItems={activeMenuItems}
-                    linkClassName={cn('nav-link z-20', activeMenuItems!.includes(child.key) && 'active')}
-                  />
-                ) : (
-                  <MenuItem
-                    item={child}
-                    level={level+1}
-                    className={'nav-item'}
-                    linkClassName={cn('nav-link', activeMenuItems!.includes(child.key) && 'active')}
-                  />
-                )}
-              </Fragment>
-            )
-          })}
+
+      {/* Dropdown Children */}
+      <div className={cn(
+        'hs-dropdown-menu mt-0 transition-all z-10 duration hs-dropdown-open:opacity-100 origin-center absolute hidden',
+        open && 'active',
+        linkClassName,
+        level !== 1 && 'left-full'
+      )}>
+        <ul className="bg-white rounded-lg shadow-lg border p-2 w-48 pt-2" aria-labelledby={`hs-dropdown-${item.key}`}>
+          {(item.children ?? []).map((child) => (
+            <Fragment key={child.key}>
+              {child.children ? (
+                <MenuItemWithChildren
+                  item={child}
+                  level={level + 1}
+                  toggleMenu={toggleMenu}
+                  activeMenuItems={activeMenuItems}
+                  linkClassName={cn('nav-link z-20', activeMenuItems!.includes(child.key) && 'active')}
+                />
+              ) : (
+                <MenuItem
+                  item={child}
+                  level={level + 1}
+                  className="nav-item"
+                  linkClassName={cn('nav-link', activeMenuItems!.includes(child.key) && 'active')}
+                />
+              )}
+            </Fragment>
+          ))}
         </ul>
       </div>
-      {item.isDivider && <hr className="-mx-2 my-2"></hr>}
+
+      {item.isDivider && <hr className="-mx-2 my-2" />}
     </li>
   )
 }
@@ -165,12 +193,13 @@ const AppMenu = ({ menuItems }: AppMenuProps) => {
 
     if (matchingMenuItem) {
       const activeMt = findMenuItem(menuItems, matchingMenuItem.key)
-      if (activeMt) {
-        setActiveMenuItems([
-          activeMt.key,
-          ...findAllParent(menuItems, activeMt),
-        ])
+      if (!activeMt) {
+        return 
       }
+      setActiveMenuItems([
+        activeMt.key,
+        ...findAllParent(menuItems, activeMt),
+      ])
     }
   }, [location, menuItems])
 
