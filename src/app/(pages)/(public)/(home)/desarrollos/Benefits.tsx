@@ -1,10 +1,18 @@
 // types
 import { Benefit } from './types'
+import { clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+type ClassValue = string | boolean | undefined | null | { [key: string]: ClassValue } | ClassValue[];
+
+function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
 
 const Benefits = ({ benefits }: { benefits: Benefit[] }) => {
   return (
     <section className="lg:py-24 py-16">
-      <div className="container">
+      <div className="container mx-auto px-4"> {/* Added mx-auto px-4 for better centering and padding */}
         <div className="text-center mb-12">
           <span className="text-sm bg-[#8a50bc]/40 text-[#310860] rounded-full px-3 py-1">
             Aplicaciones

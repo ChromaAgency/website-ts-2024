@@ -1,59 +1,221 @@
 'use client'
-import { useForm } from 'react-hook-form'
-import * as yup from 'yup'
-import { yupResolver } from '@hookform/resolvers/yup'
-import { FormInput, FormTextArea } from '@/components'
-import { useState } from 'react'
+import React, { useState } from 'react'
+
+// --- Componentes de Formulario Simplificados (sin react-hook-form) ---
+// Estos componentes ahora gestionan su valor y errores de forma más directa.
+// En tu proyecto real, asegúrate de que estos componentes se adapten a cómo
+// manejas los inputs si son compartidos.
+
+interface FormInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  label: string;
+  name: string;
+  containerClassName?: string;
+  labelClassName?: string;
+  error?: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const FormInput: React.FC<FormInputProps> = ({
+  label,
+  name,
+  type = 'text',
+  className,
+  placeholder,
+  labelClassName,
+  containerClassName,
+  error,
+  value, // Asegúrate de que el valor se pasa y se usa
+  onChange, // Asegúrate de que el onChange se pasa y se usa
+  ...props
+}) => {
+  return (
+    <div className={containerClassName}>
+      <label htmlFor={name} className={labelClassName}>
+        {label}
+      </label>
+      <input
+        id={name}
+        name={name} // Asegúrate de que el atributo 'name' esté presente
+        type={type}
+        className={className}
+        placeholder={placeholder}
+        value={value} // Vinculado al estado
+        onChange={onChange} // Maneja los cambios de estado
+        {...props}
+      />
+      {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
+    </div>
+  );
+};
+
+interface FormTextAreaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
+  label: string;
+  name: string;
+  containerClassName?: string;
+  labelClassName?: string;
+  error?: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+}
+
+const FormTextArea: React.FC<FormTextAreaProps> = ({
+  label,
+  name,
+  className,  
+  placeholder,
+  labelClassName,
+  containerClassName,
+  rows,
+  error,
+  value, // Asegúrate de que el valor se pasa y se usa
+  onChange, // Asegúrate de que el onChange se pasa y se usa
+  ...props
+}) => {
+  return (
+    <div className={containerClassName}>
+      <label htmlFor={name} className={labelClassName}>
+        {label}
+      </label>
+      <textarea
+        id={name}
+        name={name} // Asegúrate de que el atributo 'name' esté presente
+        className={className}
+        placeholder={placeholder}
+        rows={rows}
+        value={value} // Vinculado al estado
+        onChange={onChange} // Maneja los cambios de estado
+        {...props}
+      />
+      {error && <p className="text-red-500 text-xs mt-1">{error}</p>}
+    </div>
+  );
+};
+
+// --- Componente Principal ContactForm ---
+
+interface FormData {
+  fname: string;
+  lname: string;
+  company: string;
+  email: string;
+  confirmEmail: string;
+  message: string;
+}
 
 const ContactForm = () => {
-  const [emailError, setEmailError] = useState('')
+  const [formData, setFormData] = useState<FormData>({
+    fname: '',
+    lname: '',
+    company: '',
+    email: '',
+    confirmEmail: '',
+    message: '',
+  });
 
-  // form validation schema
-  const contactUsSchema = yup.object().shape({
-    fname: yup.string().required('Por favor ingrese su nombre'),
-    lname: yup.string().required('Por favor ingrese su apellido'),
-    company: yup.string(),
-    email: yup
-      .string()
-      .email('Por favor ingrese un correo electrónico válido')
-      .required('Por favor ingrese su correo electrónico'),
-    confirmEmail: yup
-      .string()
-      .oneOf([yup.ref('email')], 'Los emails deben coincidir')
-      .required('Por favor confirme su correo electrónico'),
-    message: yup.string().required('Por favor ingrese su mensaje'),
-  })
+  const [errors, setErrors] = useState<Partial<FormData & { emailMismatch: string }>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);
 
-  const { control, handleSubmit, reset, watch } = useForm({
-    resolver: yupResolver(contactUsSchema),
-  })
-
-  // Función para validar emails coincidentes
-  const validateEmails = () => {
-    const email = watch('email')
-    const confirmEmail = watch('confirmEmail')
-    
-    if (email && confirmEmail && email !== confirmEmail) {
-      setEmailError('Los emails no coinciden')
-      return false
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear error for the field being changed
+    if (errors[name as keyof FormData]) {
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
-    setEmailError('')
-    return true
-  }
+    // Specific handling for email mismatch error
+    if (name === 'email' || name === 'confirmEmail') {
+      if (errors.emailMismatch) {
+        setErrors((prev) => ({ ...prev, emailMismatch: undefined }));
+      }
+    }
+  };
 
-  const onSubmit = (data:any) => {
-    if (!validateEmails()) return
-    
-    alert("Su formulario ha sido enviado con éxito, lo contactaremos pronto!")
-    reset()
-  }
+  const validateForm = (): boolean => {
+    const newErrors: Partial<FormData & { emailMismatch: string }> = {};
+    let isValid = true;
+
+    if (!formData.fname.trim()) {
+      newErrors.fname = 'Por favor ingrese su nombre';
+      isValid = false;
+    }
+    if (!formData.lname.trim()) {
+      newErrors.lname = 'Por favor ingrese su apellido';
+      isValid = false;
+    }
+    if (!formData.email.trim()) {
+      newErrors.email = 'Por favor ingrese su correo electrónico';
+      isValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Por favor ingrese un correo electrónico válido';
+      isValid = false;
+    }
+    if (!formData.confirmEmail.trim()) {
+      newErrors.confirmEmail = 'Por favor confirme su correo electrónico';
+      isValid = false;
+    } else if (formData.email !== formData.confirmEmail) {
+      newErrors.confirmEmail = 'Los emails deben coincidir';
+      newErrors.emailMismatch = 'Los emails no coinciden'; // General error for display
+      isValid = false;
+    }
+    if (!formData.message.trim()) {
+      newErrors.message = 'Por favor ingrese su mensaje';
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitMessage(null); // Limpiar mensajes anteriores
+
+    if (!validateForm()) {
+      setSubmitMessage({ type: 'error', text: 'Por favor, corrija los errores del formulario.' });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitMessage({ type: 'success', text: 'Su mensaje ha sido enviado con éxito. ¡Lo contactaremos pronto!' });
+        setFormData({ // Reset form fields
+          fname: '',
+          lname: '',
+          company: '',
+          email: '',
+          confirmEmail: '',
+          message: '',
+        });
+        setErrors({}); // Clear any lingering errors
+      } else {
+        const errorData = await response.json();
+        setSubmitMessage({ type: 'error', text: errorData.error || 'Hubo un error al enviar su mensaje. Por favor, inténtelo de nuevo.' });
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitMessage({ type: 'error', text: 'Hubo un error de red o inesperado. Por favor, inténtelo de nuevo.' });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="flex gap-6">
-        <div className="md:w-1/2">
+    <form onSubmit={onSubmit} className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-md">
+      <div className="flex flex-col md:flex-row gap-6">
+        <div className="md:w-1/2 w-full">
           <FormInput
-            control={control}
             label="Nombre"
             name="fname"
             type="text"
@@ -61,9 +223,12 @@ const ContactForm = () => {
             placeholder="Nombre"
             labelClassName="block text-sm font-medium mb-1 text-gray-600"
             containerClassName="mb-5"
+            value={formData.fname}
+            onChange={handleChange}
+            error={errors.fname}
           />
         </div>
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 w-full">
           <FormInput
             label="Apellido"
             name="lname"
@@ -72,12 +237,14 @@ const ContactForm = () => {
             placeholder="Apellido"
             labelClassName="block text-sm font-medium mb-1 text-gray-600"
             containerClassName="mb-5"
-            control={control}
+            value={formData.lname}
+            onChange={handleChange}
+            error={errors.lname}
           />
         </div>
       </div>
       <div className="flex gap-6">
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 w-full">
           <FormInput
             label="Nombre de empresa"
             name="company"
@@ -86,12 +253,14 @@ const ContactForm = () => {
             placeholder="Nombre de empresa"
             labelClassName="block text-sm font-medium mb-1 text-gray-600"
             containerClassName="mb-5"
-            control={control}
+            value={formData.company}
+            onChange={handleChange}
+            error={errors.company} // Aunque no tiene validación de yup, puedes añadirla aquí si es necesaria
           />
         </div>
       </div>
-      <div className="flex gap-6">
-        <div className="md:w-1/2">
+      <div className="flex flex-col md:flex-row gap-6">
+        <div className="md:w-1/2 w-full">
           <FormInput
             label="Email"
             name="email"
@@ -100,10 +269,12 @@ const ContactForm = () => {
             placeholder="Su correo electrónico"
             labelClassName="block text-sm font-medium mb-1 text-gray-600"
             containerClassName="mb-5"
-            control={control}
+            value={formData.email}
+            onChange={handleChange}
+            error={errors.email}
           />
         </div>
-        <div className="md:w-1/2">
+        <div className="md:w-1/2 w-full">
           <FormInput
             label="Confirmar Email"
             name="confirmEmail"
@@ -112,9 +283,11 @@ const ContactForm = () => {
             placeholder="Confirme su correo electrónico"
             labelClassName="block text-sm font-medium mb-1 text-gray-600"
             containerClassName="mb-5"
-            control={control}
+            value={formData.confirmEmail}
+            onChange={handleChange}
+            error={errors.confirmEmail}
           />
-          {emailError && <p className="text-red-500 text-xs mt-1">{emailError}</p>}
+          {errors.emailMismatch && <p className="text-red-500 text-xs mt-1">{errors.emailMismatch}</p>}
         </div>
       </div>
       <div className="w-full">
@@ -126,14 +299,22 @@ const ContactForm = () => {
           labelClassName="block text-sm font-medium mb-1 text-gray-600"
           containerClassName="mb-5"
           rows={4}
-          control={control}
+          value={formData.message}
+          onChange={handleChange}
+          error={errors.message}
         />
       </div>
+      {submitMessage && (
+        <div className={`p-3 rounded-md mb-4 ${submitMessage.type === 'success' ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
+          {submitMessage.text}
+        </div>
+      )}
       <button
         type="submit"
-        className="inline-flex items-center text-sm  bg-[#8a50bc] text-white font-medium leading-6 text-center align-middle select-none py-2 px-4 rounded-md transition-all hover:shadow-lg hover:shadow-primary/80"
+        className="inline-flex items-center text-sm bg-[#8a50bc] text-white font-medium leading-6 text-center align-middle select-none py-2 px-4 rounded-md transition-all hover:shadow-lg hover:shadow-primary/80 disabled:opacity-50 disabled:cursor-not-allowed"
+        disabled={isSubmitting}
       >
-        Enviar
+        {isSubmitting ? 'Enviando...' : 'Enviar'}
         <span className="w-4 h-4 ms-1">
           <svg
             className="w-full h-full text-white"
@@ -154,7 +335,7 @@ const ContactForm = () => {
         </span>
       </button>
     </form>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;
