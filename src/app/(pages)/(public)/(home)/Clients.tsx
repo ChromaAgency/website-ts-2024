@@ -15,15 +15,15 @@ const Clients = () => {
         </span>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-5">
           <h1 className="text-3xl font-semibold text-[#310860]">
-            Trabajamos con las ultimas tecnologías para crear aplicaciones y sitios web de alta calidad.
+            Trabajamos con las ultimas tecnologías para crear aplicaciones y sitios web de vanguardia estratégica.
           </h1>
           <p className="text-slate-900">
-            Con nuestro conjunto de tecnologías creamos sitios web y aplicaciones de alta calidad.
+            Sitios web y aplicaciones que potencian tu ventaja competitiva.
             <br/><br/>
-            Permitiendote estar actualizado con las ultimas tendencias en tecnología. 
+            Compromiso con la evolución tecnológica para estar actualizados a las últimas tendencias tecnológicas. 
             <br/><br/>
-            No solo eso, sino que estamos en constante busqueda de nuevas tecnologías para mejorar nuestros productos y para satisfacer las necesidades de tu negocio.
-          </p>
+            Exploración proactiva incesante de nuevas tecnologías.
+            </p>
         </div>
         <div className="flex flex-wrap items-center justify-around mt-12 gap-5">
           <Image alt="algolia" src="/assets/images/brands/algolia.png" height={38} width={112} className="w-28"/>
