@@ -32,7 +32,6 @@ const Footer = () => {
               Queretaro, México
             </p>
             <p className="text-gray-500/80 mt-5">
-              Sync Industries LLC <br/>
               Delaware, USA
             </p>
           </div>
