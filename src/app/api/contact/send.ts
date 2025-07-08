@@ -15,7 +15,7 @@ interface SendEmailProps {
 export async function sendContactEmail({ firstName, lastName, company, email, message }: SendEmailProps) {
     try {
         const data = await resend.emails.send({
-            from: 'Contacto Web <noreply@chroma.agency> ', 
+            from: 'Contacto Web <noreply@chroma.agency>', 
             to: ['web@chroma.agency'], 
             subject: `Nuevo mensaje de contacto de ${firstName} ${lastName}`,
             replyTo: email, 
@@ -27,7 +27,7 @@ export async function sendContactEmail({ firstName, lastName, company, email, me
                 message,
             }),
         });
-        if (data.error) throw new Error('Error al enviar el correo electrónico.');
+        if (data.error) throw new Error(data.error.message || 'Error desconocido al enviar el correo.');
 
         return { success: true, data };
     } catch (error) {
