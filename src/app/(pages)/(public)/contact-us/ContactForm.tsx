@@ -1,11 +1,6 @@
 'use client'
 import React, { useState } from 'react'
 
-// --- Componentes de Formulario Simplificados (sin react-hook-form) ---
-// Estos componentes ahora gestionan su valor y errores de forma más directa.
-// En tu proyecto real, asegúrate de que estos componentes se adapten a cómo
-// manejas los inputs si son compartidos.
-
 interface FormInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   label: string;
   name: string;
