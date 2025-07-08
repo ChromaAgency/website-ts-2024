@@ -9,13 +9,14 @@ interface SendEmailProps {
     lastName: string;
     company: string;
     email: string;
+    confirmEmail: string;   
     message: string;
 }
 
 export async function sendContactEmail({ firstName, lastName, company, email, message }: SendEmailProps) {
     try {
         const data = await resend.emails.send({
-            from: 'chroma.agency', 
+            from: 'Contacto Web <noreply@chroma.agency> ', 
             to: ['web@chroma.agency'], 
             subject: `Nuevo mensaje de contacto de ${firstName} ${lastName}`,
             replyTo: email, 
@@ -26,7 +27,6 @@ export async function sendContactEmail({ firstName, lastName, company, email, me
                 email,
                 message,
             }),
-
         });
 
         return { success: true, data };
