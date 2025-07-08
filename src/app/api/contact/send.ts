@@ -28,6 +28,7 @@ export async function sendContactEmail({ firstName, lastName, company, email, me
                 message,
             }),
         });
+        if (data.error) throw new Error('Error al enviar el correo electrónico.');
 
         return { success: true, data };
     } catch (error) {
