@@ -9,7 +9,6 @@ interface SendEmailProps {
     lastName: string;
     company: string;
     email: string;
-    confirmEmail: string;   
     message: string;
 }
 
