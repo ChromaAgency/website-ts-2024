@@ -20,6 +20,22 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <ScrollToTop />
       </Suspense>
       <Footer />
+
+      {/* Google tag (gtag.js) */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-NZG45C6999"
+        strategy="afterInteractive"
+        async
+      />
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-NZG45C6999');
+        `}
+      </Script>
+
       <Script
         async
         defer
@@ -28,6 +44,5 @@ const Layout = ({ children }: { children: ReactNode }) => {
     </>
   )
 }
-
 
 export default Layout
