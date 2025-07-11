@@ -54,6 +54,7 @@ const Hero = () => {
                 </Link>  
               </div>  
             </div>  
+            <div className='hidden lg:block w-1/2'>  
 
             <Image  
               className="max-w-full h-auto object-contain"  
@@ -62,6 +63,7 @@ const Hero = () => {
               height={800}  
               alt="Chroma Agency Logo"  
             />  
+            </div>  
           </div>  
         </div>  
       </div>  

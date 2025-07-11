@@ -8,10 +8,6 @@ import Aos from 'aos'
 const AppProviders = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     Aos.init()
-    import('preline')
-
-
-
   }, [])
 
   return (
