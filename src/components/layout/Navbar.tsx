@@ -78,7 +78,6 @@ const Navbar = () => {
               <FaXmark size={20} />
             </button>
           </div>
-          {/* Mobile Menu Link List */}
           <div className="p-6 overflow-y-auto h-full" id="right-menu">
             <VerticalMenu menuItems={getMenuItems()} />
           </div>
