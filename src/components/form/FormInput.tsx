@@ -7,7 +7,7 @@ import {
   Controller,
   PathValue,
 } from 'react-hook-form'
-import { LuAlertCircle } from 'react-icons/lu'
+import { LuLoaderCircle } from 'react-icons/lu'
 import { cn } from '@/helpers'
 
 type BaseInputProps = DetailedHTMLProps<
@@ -68,7 +68,7 @@ const FormInput = <
             />
             {!noValidate && fieldState.error?.message && (
               <div className="absolute inset-y-0 end-0 flex items-center pointer-events-none pe-3">
-                <LuAlertCircle size={20} className="text-red-500" />
+                <LuLoaderCircle size={20} className="text-red-500" />
               </div>
             )}
           </div>
