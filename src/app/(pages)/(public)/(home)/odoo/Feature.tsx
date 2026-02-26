@@ -22,9 +22,9 @@ const Feature = () => {
             <div className="flex items-center">
               <a
                 href="/contact-us"
-                className="text-[#8a50bc] inline-flex gap-2 items-center underline"
+                className="bg-[#8a50bc] text-white rounded-md text-sm font-semibold flex-none shadow shadow-primary/20 cursor-pointer uppercase px-16 py-3"
               >
-                Contactanos <FaArrowRight />
+                Contactanos 
               </a>
             </div>
           </div>

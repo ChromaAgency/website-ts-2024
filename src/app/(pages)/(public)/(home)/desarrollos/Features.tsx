@@ -142,6 +142,9 @@ const Features = () => {
                   </h1>
                 </div>
               </div>
+              <div className='mt-5 '>
+                <a href="/contact-us" className='bg-[#8a50bc] text-white rounded-md text-sm font-semibold flex-none shadow shadow-primary/20 cursor-pointer p-16 py-3'>Solicitar demo</a>
+              </div>
             </div>
             <div
               className="order-1 lg:order-2"
@@ -288,6 +291,9 @@ const Features = () => {
                   </h1>
                 </div>
               </div>
+              <div className='mt-5 '>
+                <a href="/contact-us" className='bg-[#8a50bc] text-white rounded-md text-sm font-semibold flex-none shadow shadow-primary/20 cursor-pointer p-16 py-3'>Solicitar demo</a>
+              </div>
             </div>
           </div>
         </div>
@@ -428,6 +434,9 @@ const Features = () => {
                     Alertas por caducidad de medicamentos o lote específico.
                   </h1>
                 </div>
+              </div>
+              <div className='mt-5 '>
+                <a href="/contact-us" className='bg-[#8a50bc] text-white rounded-md text-sm font-semibold flex-none shadow shadow-primary/20 cursor-pointer p-16 py-3'>Solicitar demo</a>
               </div>
             </div>
             <div
