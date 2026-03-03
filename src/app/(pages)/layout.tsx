@@ -9,7 +9,7 @@ const ScrollToTop = dynamic(() => import('@/components/ScrollToTop'))
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <Script id="google-tagmanager" strategy="afterInteractive">
+      <Script id="google-tagmanager" strategy="beforeInteractive">
        {` <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -30,7 +30,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <ScrollToTop />
       </Suspense>
       <Footer />
-      <Script id="google-tagmanager-noscript" strategy="afterInteractive">
+      <Script id="google-tagmanager-noscript" strategy="beforeInteractive">
       {`<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FH4GHJJ"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
