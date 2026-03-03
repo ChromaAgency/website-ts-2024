@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import * as React from 'react';
 
 interface ContactFormEmailProps {
@@ -18,7 +19,7 @@ const ContactFormEmail: React.FC<ContactFormEmailProps> = ({
 }) => {
   return (
     <html lang="es">
-      <head>
+      <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Nuevo Mensaje de Contacto</title>
@@ -59,7 +60,7 @@ const ContactFormEmail: React.FC<ContactFormEmailProps> = ({
             }
           `}
         </style>
-      </head>
+      </Head>
       <body>
         <div className="container">
           <h1>Nuevo Mensaje de Contacto</h1>
