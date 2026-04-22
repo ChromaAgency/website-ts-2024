@@ -7,6 +7,7 @@ import { footerLinks } from '@/components/common/data'
 
 //image
 import logoDark from '@/assets/images/logo-dark.png'
+import odooLogo from '@/assets/images/odoo_silver_partner_rgb.png';
 
 const Footer = () => {
   return (
@@ -17,8 +18,17 @@ const Footer = () => {
             <Link href="/">
               <Image
                 src={logoDark}
-                className="h-8"
-                height={32}
+                className="h-100 w-100"
+                height={200}
+                width={126}
+                alt=""
+              />
+            </Link>
+            <Link href="https://www.odoo.com/es/partners/chroma-agency-3377991?country_id=11" target="_blank" rel="noopener noreferrer" >
+              <Image
+                src={odooLogo}
+                className="h-100 w-100"
+                height={200}
                 width={126}
                 alt=""
               />
@@ -52,14 +62,16 @@ const Footer = () => {
                 <div className="flex flex-col gap-3">
                   <h5 className="mb-3 text-gray-800">Escribinos</h5>
                   <div className="text-gray-500/80">
-                    <Link href="/">web@chroma.agency</Link>
+                    <p>web@chroma.agency</p>
                   </div>
                   <div
                     id="footer-social-links"
                     className="flex sm:justify-center gap-10 mt-5"
                   >
                     <div>
-                      <Link href="https://www.instagram.com/chroma_agency_/">
+                      <Link href="https://www.instagram.com/chroma_agency_/"
+                      target="_blank" 
+                      rel="noopener noreferrer">
                         <svg
                           className="w-5 h-5 text-slate-400 transition-all"
                           xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +96,9 @@ const Footer = () => {
                       </Link>
                     </div>
                     <div>
-                      <Link href="https://www.linkedin.com/company/chroma-agency-soft/">
+                      <Link href="https://www.linkedin.com/company/chroma-agency-soft/"
+                      target="_blank" 
+                      rel="noopener noreferrer">
                         <svg
                           className="w-5 h-5 text-slate-400 transition-all"
                           xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +116,10 @@ const Footer = () => {
                       </Link>
                     </div>
                     <div>
-                      <Link href="https://www.youtube.com/@chroma_agency">
+                      <Link 
+                      href="https://www.youtube.com/@chroma_agency"
+                      target="_blank"
+                      rel="noopener noreferrer">
                         <svg
                           className="w-5 h-5 text-slate-400 transition-all"
                           xmlns="http://www.w3.org/2000/svg"
@@ -120,12 +137,19 @@ const Footer = () => {
                     </div>
                     <div>
                       <div>
-                        <Link href="https://www.tiktok.com/@chroma_agency">
+                        <Link 
+                          href="https://www.tiktok.com/@chroma_agency"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <SiTiktok className="w-5 h-5 text-slate-400 transition-all" />
                         </Link>
                       </div>
                     </div>
                   </div>
+                </div>
+                <div className="flex flex-col gap-3 mt-10">
+                  <Link className="underline text-blue-300" href="/faq">Preguntas Frecuentes</Link>
                 </div>
               </div>
             </div>
