@@ -1,10 +1,6 @@
 import { Metadata } from 'next'
 import Benefits from './Benefits'
-import CTA from './CTA'
-import Culture from './Culture'
 import Hero from './Hero'
-import Vacancies from './Vacancies'
-import Footer from '@/components/common/Footer'
 import Features from './Features'
 
 //data
@@ -25,8 +21,6 @@ const career = () => {
         <div id="benefits">
           <Benefits benefits={benefits} />
         </div>
-
-        <Footer />
       </div>
     </>
   )

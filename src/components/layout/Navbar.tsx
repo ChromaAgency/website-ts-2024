@@ -22,12 +22,16 @@ const Navbar = () => {
     const handleScroll = () => {
       if (navbarRef.current) {
         if (window.scrollY >= 80) {
-          navbarRef.current.classList.add('bg-white', 'shadow', 'lg:bg-white')
+          navbarRef.current.classList.add(
+            'bg-white',
+            'shadow-panel',
+            'border-slate-200/80'
+          )
         } else {
           navbarRef.current.classList.remove(
             'bg-white',
-            'shadow',
-            'lg:bg-white'
+            'shadow-panel',
+            'border-slate-200/80'
           )
         }
       }
@@ -45,18 +49,22 @@ const Navbar = () => {
       <header
         id="navbar"
         ref={navbarRef}
-        className="fixed top-0 inset-x-0 flex items-center z-40 w-full lg:bg-transparent bg-white transition-all py-5"
+        className="fixed top-0 inset-x-0 flex items-center z-40 w-full bg-white/95 lg:bg-white/75 backdrop-blur-md border-b border-transparent transition-all py-4"
       >
         <div className="container">
           <nav className="flex items-center">
             <Link href="/">
               <Image src={logoDark} className="h-8" width={126} alt="Logo" />
             </Link>
-            <div className="lg:block hidden ms-auto">
+            <div className="lg:block hidden ms-auto rounded-full border border-slate-200/80 bg-white/90 px-4 py-1.5 shadow-sm">
               <AppMenu menuItems={getHorizontalMenuItems()} />
             </div>
             <div className="lg:hidden flex items-center ms-auto px-2.5">
-              <button type="button" onClick={toggleOffcanvas}>
+              <button
+                type="button"
+                onClick={toggleOffcanvas}
+                className="inline-flex items-center justify-center rounded-md border border-slate-200 bg-white p-2 text-brand"
+              >
                 <FaBars size={24} />
               </button>
             </div>
@@ -65,7 +73,7 @@ const Navbar = () => {
       </header>
       <OffcanvasLayout
         placement="end"
-        sizeClassName="w-full max-w-sm bg-white border-s"
+        sizeClassName="w-full max-w-sm bg-white border-s border-slate-200"
         open={isOpenOffcanvas}
         toggleOffcanvas={closeOffcanvas}
       >
@@ -74,7 +82,10 @@ const Navbar = () => {
             <Link href="/">
               <Image src={logoDark} width={126} className="h-8" alt="Logo" />
             </Link>
-            <button className="flex items-center px-2" onClick={closeOffcanvas}>
+            <button
+              className="flex items-center rounded-md border border-slate-200 px-2 py-1 text-brand"
+              onClick={closeOffcanvas}
+            >
               <FaXmark size={20} />
             </button>
           </div>

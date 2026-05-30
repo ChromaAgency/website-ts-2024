@@ -1,11 +1,6 @@
-import HelpLinks from './HelpLinks'
 import Hero from './Hero'
 import SupportCenter from './SupportCenter'
-import Footer from '@/components/common/Footer'
-import ContactForm from './ContactForm'
 
-//data
-import { helpLinks } from './data'
 import { Metadata } from 'next'
 import FAQs from './FAQs'
 
@@ -18,7 +13,7 @@ const Help = () => {
     <>
       <div>
         <Hero />
-        <section className="py-2 relative">
+        <section className="pt-2 pb-20 lg:pb-24 relative">
           <div className="container">
             <div className="grid lg:grid-cols-3 grid-cols-1 gap-2">
               <div className="lg:col-span-2 cols-span-1">
@@ -34,7 +29,6 @@ const Help = () => {
           </div>
         </section>
         {/* <ContactForm /> */}
-        <Footer />
       </div>
     </>
   )
