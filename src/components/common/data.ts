@@ -1,5 +1,7 @@
 import { StaticImageData } from 'next/image'
 import { PlanItem, PricingCard } from './types'
+import { ReactNode } from 'react'
+import Link from 'next/link'
 
 //images
 import avatar1 from '@/assets/images/avatars/img-1.jpg'
@@ -14,7 +16,7 @@ type Testimonials = {
 
 type AccordionData = {
   title: string
-  description: string
+  description: string | ReactNode
 }
 
 type FooterLink = {
@@ -56,24 +58,33 @@ const testimonials: Testimonials[] = [
 
 const FAQContent: AccordionData[] = [
   {
-    title: ' Can I use this template for my client?',
+    title: '¿Por qué debería contratar a un Partner Oficial de Odoo en lugar de implementarlo por mi cuenta?',
     description:
-      ' Yup, the marketplace license allows you to use this theme in any end products. For more information on licenses, please refere license terms on marketplace. ',
+      'Implementar Odoo de forma independiente es posible, pero conlleva riesgos técnicos y de procesos. Un Partner Oficial garantiza: Certificación Técnica: Conocimiento profundo del framework de Odoo. Metodología de Implementación: Evitamos el "scope creep" y garantizamos que el sistema sea escalable. Acceso a Soporte Enterprise: Solo los partners tienen línea directa con el soporte de Odoo SA para resolver bugs críticos de nivel de código.',
   },
   {
-    title: ' Can this theme work with WordPress?',
+    title: ' ¿Cuál es la diferencia entre Odoo Community y Odoo Enterprise?',
     description:
-      " No. This is a HTML template. It won't directly with WordPress, though you can convert this into WordPress compatible theme. ",
+      'La versión Enterprise incluye módulos avanzados (Contabilidad completa, Manufactura, Estudio, Firma electrónica), una interfaz móvil optimizada y actualizaciones de versión incluidas. Como partners, ayudamos a las empresas a migrar de Community a Enterprise para desbloquear el 100% del potencial de automatización.',
   },
   {
-    title: ' How do I get help with the theme?',
+    title: '¿Qué pasa si las funciones nativas de Odoo no cubren mis necesidades de negocio?',
     description:
-      ' Use our dedicated support email (support@coderthemes.com) to send your issues or feedback. We are here to help anytime. ',
+      ' Somos especialistas en desarrollo de software a medida. Odoo es un sistema modular; si un proceso es único en tu empresa, desarrollamos módulos personalizados (custom addons) que se integran perfectamente con el núcleo del sistema, manteniendo la integridad de tus datos y la facilidad de actualización futura. Aclaración: todo desarrollo extra, que requiera modificar código nativo de Odoo, se cobra aparte mediante paquetes de horas. ',
   },
   {
-    title: ' Will you regularly give updates of Prompt ?',
+    title: '¿Es posible integrar Odoo con otras plataformas externas?',
+    description: 'Sí. A través de la API de Odoo, realizamos integraciones complejas con plataformas de E-commerce, pasarelas de pago locales, transportistas y software de BI. Nuestro enfoque es eliminar las islas de información.',     
+  },
+  {
+    title: '¿Cuánto cuesta implementar Odoo con un partner?',
     description:
-      ' Yes, We will update the Prompt regularly. All the future updates would be available without any cost. ',
+      'El costo varía según tres factores: Licenciamiento: Pago directo a Odoo por usuario/mes. Implementación: Configuración, carga de datos y formación.Personalización: Horas de desarrollo para funciones a medida.',
+  },
+  {
+    title: '¿Cuánto tiempo tarda una implementación estándar de Odoo?',
+    description:
+      'Un proyecto inicial suele tomar entre 8 a 12 semanas. Proyectos más complejos con desarrollos a medida pueden extenderse según los requerimientos. Utilizamos metodologías ágiles para entregar valor desde el primer mes.',
   },
 ]
 
