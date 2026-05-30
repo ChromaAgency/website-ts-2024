@@ -32,8 +32,12 @@ const helpLinks: HelpLink[] = [
         </g>
       </svg>
     ),
-    title: 'Getting started',
-    links: ['General information', 'Signup help', 'Preparing the documents'],
+    title: 'Primeros pasos',
+    links: [
+      'Como iniciar un proyecto con Chroma',
+      'Informacion inicial requerida',
+      'Preparacion para implementacion',
+    ],
   },
   {
     icon: (
@@ -54,11 +58,11 @@ const helpLinks: HelpLink[] = [
         </g>
       </svg>
     ),
-    title: 'Managing my account',
+    title: 'Gestion de cuenta y soporte',
     links: [
-      'Account information',
-      'Identity verification',
-      'Linking a payment method',
+      'Canales de comunicacion',
+      'Seguimiento de avances',
+      'Facturacion y administracion',
     ],
   },
   {
@@ -96,8 +100,12 @@ const helpLinks: HelpLink[] = [
         </g>
       </svg>
     ),
-    title: 'API & Integrations',
-    links: ['Rest API Integrations', 'API SDKs', 'Embed scripts'],
+    title: 'Integraciones y automatizacion',
+    links: [
+      'Integraciones via API',
+      'Conectores a medida',
+      'Automatizaciones con Odoo',
+    ],
   },
 ]
 

@@ -6,46 +6,48 @@ import { FaArrowRight } from 'react-icons/fa6'
 
 const Hero = () => {
   const scrollToComponents = (componentId: string) => {
-    const Section = document.getElementById(componentId);
+    const Section = document.getElementById(componentId)
     if (Section) {
-      const headerOffset = 70; 
-      const elementPosition = Section.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - headerOffset;
+      const headerOffset = 70
+      const elementPosition = Section.getBoundingClientRect().top
+      const offsetPosition = elementPosition + window.scrollY - headerOffset
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
-      });
+        behavior: 'smooth',
+      })
     }
-  };
+  }
 
   return (
-    <section className="bg-gradient-to-t bg-[#2ee0ca]/10 relative">
+    <section className="relative bg-gradient-to-t from-accent/10 to-white">
       <section className="relative py-16 sm:py-20 md:py-40">
         <div className="container">
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-10 items-center">
             <div className="order-2 lg:order-1">
               <div className="text-center lg:text-start">
-                <h1 className="text-3xl/tight sm:text-4xl/tight lg:text-5xl/tight font-semibold mb-5 text-[#310860] uppercase">
+                <p className="tech-kicker mb-4">Ingenieria de soluciones</p>
+                <h1 className="mb-5 text-3xl/tight font-semibold uppercase text-brand sm:text-4xl/tight lg:text-5xl/tight">
                   Desarrollos hechos a&nbsp;
-                  <span className="relative z-0 after:bg-[#2ee0ca] after:-z-10 after:absolute after:h-6 after:w-full after:bottom-0 after:end-0">
+                  <span className="relative z-0 after:absolute after:bottom-0 after:end-0 after:h-6 after:w-full after:-z-10 after:bg-accent">
                     medida.
                   </span>
                 </h1>
-                <p className="text-gray-700 leading-relaxed lg:w-3/4">
-                Ofrecemos desarrollos tecnológicos adaptables y funcionales, creados por un equipo de profesionales en constante formación.
+                <p className="leading-relaxed text-slate-700 lg:w-3/4">
+                  Ofrecemos desarrollos tecnologicos adaptables y funcionales,
+                  creados por un equipo de profesionales en constante formacion.
                 </p>
                 <div className="mt-10 flex items-center justify-center lg:justify-start">
-                <button 
-                    onClick={() => scrollToComponents('features')} 
-                    className="mr-5 flex items-center gap-3 bg-[#2ee0ca] text-black/70 rounded-md text-md font-semibold flex-none shadow shadow-[#2ee0ca] hover:shadow-lg hover:shadow-[#2ee0ca]/30 focus:shadow-none focus:outline focus:outline-[#2ee0ca]/50 px-8 py-3"
+                  <button
+                    onClick={() => scrollToComponents('features')}
+                    className="mr-5 flex items-center gap-3 rounded-md bg-accent px-8 py-3 text-md font-semibold text-slate-700 shadow shadow-accent/30 hover:shadow-lg hover:shadow-accent/40 focus:outline focus:outline-accent/50"
                   >
-                    Modulos ODOO
+                    Modulos Odoo
                     <FaArrowRight/>
                   </button>
-                  <button 
-                    onClick={() => scrollToComponents('benefits')} 
-                    className="flex items-center gap-3 bg-[#8a50bc] text-white rounded-md text-sm font-semibold flex-none shadow shadow-[#8a50bc] hover:shadow-lg hover:shadow-[#8a50bc]/30 focus:shadow-none focus:outline focus:outline-[#8a50bc]/50 px-8 py-3"
+                  <button
+                    onClick={() => scrollToComponents('benefits')}
+                    className="flex items-center gap-3 rounded-md bg-primary px-8 py-3 text-sm font-semibold text-white shadow shadow-primary/30 hover:shadow-lg hover:shadow-primary/40 focus:outline focus:outline-primary/50"
                   >
                     Aplicaciones Web
                     <FaArrowRight/>
@@ -53,9 +55,9 @@ const Hero = () => {
 
                 </div>
                 <div className="mt-10 flex items-center justify-center lg:justify-start">
-                  <button 
-                    onClick={() => scrollToComponents('benefits')} 
-                    className="flex items-center gap-3 bg-[#310860] text-white rounded-md text-sm font-semibold flex-none shadow shadow-[#8a50bc] hover:shadow-lg hover:shadow-[#8a50bc]/30 focus:shadow-none focus:outline focus:outline-[#8a50bc]/50 px-8 py-3"
+                  <button
+                    onClick={() => scrollToComponents('benefits')}
+                    className="flex items-center gap-3 rounded-md bg-brand px-8 py-3 text-sm font-semibold text-white shadow shadow-primary/30 hover:shadow-lg hover:shadow-primary/40 focus:outline focus:outline-primary/50"
                   >
                     Chatbots con IA
                     <FaArrowRight/>
