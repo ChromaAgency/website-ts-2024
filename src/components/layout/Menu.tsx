@@ -64,8 +64,8 @@ const MenuItemWithChildren = ({
             className={cn(
               'font-medium',
               activeMenuItems?.includes(item.key)
-                ? 'text-[#8a50bc]'
-                : 'text-gray-800'
+                ? 'text-primary'
+                : 'text-slate-700'
             )}
           >
             {item.label}
@@ -104,8 +104,8 @@ const MenuItemWithChildren = ({
           className={cn(
             'font-medium flex-1 py-2',
             activeMenuItems?.includes(item.key)
-              ? 'text-[#8a50bc]'
-              : 'text-gray-800'
+              ? 'text-primary'
+              : 'text-slate-700'
           )}
         >
           {item.label}
@@ -178,8 +178,8 @@ const MenuItemLink = ({ item, className }: SubMenus) => {
   return (
     <Link
       className={cn(
-        'nav-link flex py-2 text-gray-700',
-        activeMenuItems && 'text-[#8a50bc] font-semibold',
+        'nav-link flex py-2 text-slate-600',
+        activeMenuItems && 'text-primary font-semibold',
         className
       )}
       href={item.url ?? '#'}
@@ -225,7 +225,7 @@ const AppMenu = ({ menuItems, isVertical = false }: AppMenuProps) => {
         'flex items-center',
         isVertical
           ? 'flex-col items-start gap-y-1 w-full'
-          : 'flex-row gap-x-3 justify-center'
+          : 'flex-row gap-x-3 justify-center px-2'
       )}
     >
       {(menuItems ?? []).map((item) => (

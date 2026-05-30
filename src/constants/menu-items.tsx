@@ -53,6 +53,12 @@ const MENU_ITEMS: MenuItemTypes[] = [
     url: '/contact-us',
     isTitle: true,
   },
+  {
+    key: 'faq',
+    label: 'FAQ',
+    url: '/faq',
+    isTitle: true,
+  },
 ]
 
 const HORIZONTAL_MENU_ITEMS: MenuItemTypes[] = [
@@ -78,6 +84,12 @@ const HORIZONTAL_MENU_ITEMS: MenuItemTypes[] = [
     key: 'contact-us',
     label: 'Contacto',
     url: '/contact-us',
+    isTitle: true,
+  },
+  {
+    key: 'faq',
+    label: 'FAQ',
+    url: '/faq',
     isTitle: true,
   },
 ]

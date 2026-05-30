@@ -1,13 +1,14 @@
 const Hero = () => {
   return (
-    <section className="bg-[#2ee0ca]/10 lg:pt-28 sm:pb-36 pb-16 pt-36 relative">
+    <section className="bg-gradient-to-b from-accent/15 via-white to-surface lg:pt-28 sm:pb-36 pb-16 pt-36 relative">
       <div className="container">
         <div className="flex justify-center">
           <div className="lg:w-7/12 text-center">
-            <h1 className="text-5xl/relaxed text-[#310860]">CONTÁCTANOS</h1>
-            <p className="mb-6 md:text-lg text-gray-700">
-              Completá el siguiente formulario y estaremos en contacto contigo
-              lo antes posible.
+            <p className="tech-kicker mb-4">Contacto</p>
+            <h1 className="text-4xl lg:text-5xl/relaxed text-brand">Hablemos de tu proyecto</h1>
+            <p className="mb-6 md:text-lg text-slate-600">
+              Completa el siguiente formulario y nuestro equipo se pondra en
+              contacto contigo a la brevedad.
             </p>
           </div>
         </div>

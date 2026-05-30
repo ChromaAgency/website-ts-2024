@@ -1,13 +1,15 @@
 const Hero = () => {
   return (
-    <section className="pt-36 pb-24 bg-[#2ee0ca]/10">
+    <section className="pt-36 pb-24 bg-gradient-to-b from-accent/15 via-white to-surface">
       <div className="container">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="md:text-5xl/tight text-3xl font-bold mb-6 text-[#310860]">
-            ¿Necesitas ayuda?
+          <p className="tech-kicker mb-4">Base de conocimiento</p>
+          <h2 className="md:text-5xl/tight text-3xl font-bold mb-6 text-brand">
+            Resolvemos tus dudas
           </h2>
-          <p className="lg:text-lg text-[#310860]/2">
-            Explora nuestra base de conocimiento para aprender más sobre todas las funcionalidades que ofrece Chroma. 
+          <p className="lg:text-lg text-slate-600 leading-relaxed">
+            Explora nuestras respuestas frecuentes para conocer mejor las
+            funcionalidades y servicios que ofrece Chroma.
           </p>
           {/* <form className="w-full mt-12">
             <div className="relative flex justify-between items-center border bg-white rounded-md">

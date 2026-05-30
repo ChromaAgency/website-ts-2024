@@ -1,11 +1,3 @@
-/*
-Version: 1.0
-Author: coderthemes
-Email: support@coderthemes.com
-*/
-/* @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap'); */
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -131,10 +123,10 @@ button[data-headlessui-state] {
 .navbar-nav {
   .nav-item {
     .nav-link {
-      @apply font-medium relative tracking-wide flex items-center py-1.5 px-3.5 text-gray-800 rounded-md text-sm cursor-pointer transition-all duration-300 bg-transparent;
+      @apply font-medium relative tracking-wide flex items-center py-2 px-3.5 text-slate-700 rounded-md text-sm cursor-pointer transition-all duration-300 bg-transparent;
 
       &:is(.active, :active, :focus, :hover) {
-        @apply text-[#8a50bc];
+        @apply text-primary;
       }
     }
 
@@ -153,7 +145,7 @@ Navbar header {
 
 
   &.nav-sticky {
-    @apply bg-white shadow;
+    @apply bg-white shadow-panel border-b border-slate-200/80;
   }
 
   &.dark {
@@ -212,9 +204,21 @@ html {
 }
 
 
+:root {
+  --brand-primary: #8a50bc;
+  --brand-deep: #310860;
+  --brand-accent: #2ee0ca;
+  --surface-muted: #f7f8fc;
+
+  &:is([data-mode="dark"]) {
+    color-scheme: dark;
+  }
+}
+
+
 body {
   font-size: 15px;
-  @apply font-body overflow-x-hidden text-gray-500;
+  @apply font-body overflow-x-hidden text-slate-600 bg-surface;
 }
 
 
@@ -239,7 +243,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-semibold;
+  @apply font-semibold text-brand;
 }
 
 .vertical-rl {
@@ -247,9 +251,34 @@ h6 {
   text-orientation: mixed;
 }
 
+.tech-section {
+  @apply relative py-20;
+}
 
-:root {
-  &:is([data-mode="dark"]) {
-    color-scheme: dark;
-  }
+.tech-kicker {
+  @apply uppercase tracking-[0.2em] text-xs text-primary font-semibold;
+}
+
+.tech-heading {
+  @apply text-brand font-semibold;
+}
+
+.tech-subtitle {
+  @apply text-slate-600 leading-relaxed;
+}
+
+.tech-surface {
+  @apply bg-white border border-slate-200/80 rounded-xl shadow-panel;
+}
+
+.tech-btn-primary {
+  @apply inline-flex gap-2 items-center justify-center py-3 px-6 rounded-md border border-brand bg-brand text-white transition-all duration-300 hover:bg-transparent hover:text-brand hover:shadow-panel focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50;
+}
+
+.tech-btn-secondary {
+  @apply inline-flex gap-2 items-center justify-center py-3 px-6 rounded-md border border-primary text-primary bg-white transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-panel focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50;
+}
+
+.tech-link {
+  @apply text-primary font-medium transition-colors duration-300 hover:text-brand;
 }
