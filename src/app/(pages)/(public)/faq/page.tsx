@@ -6,6 +6,8 @@ import FAQs from './FAQs'
 
 export const metadata: Metadata = {
   title: 'Preguntas Frecuentes',
+  description:
+    'Resuelve tus dudas sobre implementacion de Odoo, integraciones y desarrollo a medida con el equipo de Chroma Agency.',
 }
 
 const Help = () => {

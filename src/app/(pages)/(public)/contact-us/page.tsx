@@ -1,10 +1,11 @@
 import { Metadata } from 'next'
-import Footer3 from '@/components/common/Footer3'
 import Hero from './Hero'
 import ContactUs from './ContactUs'
 
 export const metadata: Metadata = {
-  title: 'Contactáctanos',
+  title: 'Contacto | Chroma Agency',
+  description:
+    'Contacta al equipo de Chroma para implementar Odoo, desarrollar soluciones a medida y acelerar la digitalizacion de tu empresa.',
 }
 
 const Contact = () => {

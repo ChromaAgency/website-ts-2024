@@ -12,7 +12,7 @@ const benefits: Benefit[] = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-[#8a50bc]"
+        className="w-8 h-8 text-primary"
         viewBox="0 0 24 24"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@ const benefits: Benefit[] = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-[#8a50bc]"
+        className="w-8 h-8 text-primary"
         viewBox="0 0 24 24"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +68,7 @@ const benefits: Benefit[] = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-[#8a50bc]"
+        className="w-8 h-8 text-primary"
         viewBox="0 0 24 24"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ const benefits: Benefit[] = [
   {
     icon: (
       <svg
-        className="w-8 h-8 text-[#8a50bc]"
+        className="w-8 h-8 text-primary"
         viewBox="0 0 24 24"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"

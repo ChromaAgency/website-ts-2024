@@ -1,17 +1,13 @@
 import { Metadata } from 'next'
 import About from './About'
-import Client from './Client'
 import Feature from './Feature'
-import Team from './Team'
 import Hero from './Hero'
 import Counter from './Counter'
-import Footer from '@/components/common/Footer'
-
-//data
-import { teamMembers } from './data'
 
 export const metadata: Metadata = {
-  title: 'Company',
+  title: 'Odoo ERP | Chroma Agency',
+  description:
+    'Implementamos y personalizamos Odoo para centralizar procesos, automatizar operaciones y escalar tu empresa con una estrategia digital clara.',
 }
 
 const Company = () => {

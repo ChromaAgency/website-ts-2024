@@ -8,6 +8,8 @@ import { benefits } from './data'
 
 export const metadata: Metadata = {
   title: 'Desarrollos',
+  description:
+    'Desarrollamos conectores Odoo, aplicaciones web y soluciones con IA para optimizar procesos y acelerar el crecimiento de tu negocio.',
 }
 
 const career = () => {

@@ -7,7 +7,7 @@ import whiteWave from '@/assets/images/shapes/white-wave.svg'
 
 const Counter = () => {
   return (
-    <section className="bg-[#2ee0ca]/10 relative lg:py-24 py-16">
+    <section className="relative bg-accent/10 py-16 lg:py-24">
       <div className="absolute top-0 inset-x-0 hidden sm:block">
         <Image
           width={1905}
@@ -20,7 +20,7 @@ const Counter = () => {
       <div className="py-10">
         <div className="container" data-aos="fade-up">
           <div className="text-center">
-            <h1 className="text-3xl/tight font-medium mt-3 uppercase text-[#310860]">
+            <h1 className="mt-3 text-3xl/tight font-medium uppercase text-brand">
              Todo tu negocio en un solo lugar.
             </h1>
           </div>
@@ -30,8 +30,8 @@ const Counter = () => {
                 <span className="text-3xl">
                   <CountUp duration={5} start={1} end={12} suffix="M+" />
                 </span>
-                <h1 className="mt-3 mb-1">Usuarios</h1>
-                <p className="text-gray-500">usando Odoo ERP</p>
+                <h1 className="mb-1 mt-3 text-brand">Usuarios</h1>
+                <p className="text-slate-600">usando Odoo ERP</p>
               </div>
               <div>
                 <span className="text-3xl">
@@ -43,15 +43,15 @@ const Counter = () => {
                     prefix=""
                   />
                 </span>
-                <h1 className="mt-3 mb-1">Aplicaciones de la Comunidad</h1>
-                <p className="text-gray-500">desarrolladas para cada empresa</p>
+                <h1 className="mb-1 mt-3 text-brand">Aplicaciones de la Comunidad</h1>
+                <p className="text-slate-600">desarrolladas para cada empresa</p>
               </div>
               <div>
                 <span className="text-3xl">
                   <CountUp duration={5} start={1} end={100} suffix="%" />
                 </span>
-                <h1 className="mt-3 mb-1">Liberá el potencial de crecimiento</h1>
-                <p className="text-gray-500">mejorá la calidad de tu trabajo</p>
+                <h1 className="mb-1 mt-3 text-brand">Libera el potencial de crecimiento</h1>
+                <p className="text-slate-600">mejora la calidad de tu trabajo</p>
               </div>
             </div>
           </div>

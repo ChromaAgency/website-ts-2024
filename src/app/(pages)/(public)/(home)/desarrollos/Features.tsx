@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Features = () => {
   return (
@@ -11,20 +12,20 @@ const Features = () => {
               data-aos="fade-right"
               data-aos-duration={600}
             >
-              <span className="text-sm bg-[#8a50bc]/40 text-[#310860] rounded-full px-3 py-1">
+              <span className="text-sm bg-primary/20 text-brand rounded-full px-3 py-1">
                 SimpliRoute
               </span>
-              <h1 className="text-[#310860] text-3xl font-semibold mt-3 mb-4">
+              <h1 className="text-brand text-3xl font-semibold mt-3 mb-4">
                 SIMPLIROUTE ODOO CONNECTOR
               </h1>
-              <p className="text-black">
+              <p className="text-slate-700">
                 Conector de Odoo con <a href="https://simpliroute.com" className='text-primary underline'>Simpliroute</a>
               </p>
               <div className="flex flex-col gap-4 mt-10">
                 <div className="flex items-center gap-4">
                   <div className="bg-primary/10 rounded-lg flex items-center justify-center h-12 w-12">
                     <svg
-                      className="h-6 w-6 text-[#310860]"
+                      className="h-6 w-6 text-brand"
                       viewBox="0 0 24 24"
                       version="1.1"
                       xmlns="http://www.w3.org/2000/svg"
@@ -63,14 +64,14 @@ const Features = () => {
                       </g>
                     </svg>
                   </div>
-                  <h1 className="font-medium rounded-full px-3 py-1 text-black">
+                  <h1 className="font-medium rounded-full px-3 py-1 text-slate-700">
                     Sincronización de Órdenes de Venta/Entregas.
                   </h1>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-primary/10 rounded-lg flex items-center justify-center h-12 w-12">
                     <svg
-                      className="h-6 w-6 text-[#310860]"
+                      className="h-6 w-6 text-brand"
                       viewBox="0 0 24 24"
                       version="1.1"
                       xmlns="http://www.w3.org/2000/svg"
@@ -103,14 +104,14 @@ const Features = () => {
                       </g>
                     </svg>
                   </div>
-                  <h1 className="font-medium rounded-full px-3 py-1 text-black">
+                  <h1 className="font-medium rounded-full px-3 py-1 text-slate-700">
                     Gestión de Rutas y Vehículos.
                   </h1>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-primary/10 rounded-lg flex items-center justify-center h-12 w-12">
                     <svg
-                      className="h-6 w-6 text-[#310860]"
+                      className="h-6 w-6 text-brand"
                       viewBox="0 0 24 24"
                       version="1.1"
                       xmlns="http://www.w3.org/2000/svg"
@@ -137,13 +138,15 @@ const Features = () => {
                       </g>
                     </svg>
                   </div>
-                  <h1 className="font-medium rounded-full px-3 py-1 text-black">
+                  <h1 className="font-medium rounded-full px-3 py-1 text-slate-700">
                     Validación y Pruebas de Entrega.
                   </h1>
                 </div>
               </div>
               <div className='mt-5 '>
-                <a href="/contact-us" className='bg-[#8a50bc] text-white rounded-md text-sm font-semibold flex-none shadow shadow-primary/20 cursor-pointer p-16 py-3'>Solicitar demo</a>
+                <Link href="/contact-us" className="tech-btn-primary px-16 py-3 text-sm">
+                  Solicitar demo
+                </Link>
               </div>
             </div>
             <div
@@ -168,20 +171,20 @@ const Features = () => {
               />
             </div>
             <div data-aos="fade-left" data-aos-duration={700}>
-              <span className="text-sm bg-[#8a50bc]/40 text-[#310860] rounded-full px-3 py-1">
+              <span className="text-sm bg-primary/20 text-brand rounded-full px-3 py-1">
                 Producteca
               </span>
-              <h1 className="text-[#310860] text-3xl font-semibold mt-3 mb-4">
+              <h1 className="text-brand text-3xl font-semibold mt-3 mb-4">
                 PRODUCTECA ODOO CONNECTOR
               </h1>
-              <p className="text-black">
+              <p className="text-slate-700">
                 Conector de Odoo con <a href="https://producteca.com" className='text-primary underline'>Producteca</a>
               </p>
               <div className="flex flex-col gap-4 mt-10">
                 <div className="flex items-center gap-4">
                   <div className="bg-primary/10 rounded-lg flex items-center justify-center h-12 w-12">
                     <svg
-                      className="h-6 w-6 text-[#310860]"
+                      className="h-6 w-6 text-brand"
                       viewBox="0 0 24 24"
                       version="1.1"
                       xmlns="http://www.w3.org/2000/svg"
@@ -208,14 +211,14 @@ const Features = () => {
                       </g>
                     </svg>
                   </div>
-                  <h1 className="font-medium rounded-full px-3 py-1 text-black">
+                  <h1 className="font-medium rounded-full px-3 py-1 text-slate-700">
                     Información de pedidos/clientes/envíos de Producteca a Odoo.
                   </h1>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-primary/10 rounded-lg flex items-center justify-center h-12 w-12">
                     <svg
-                      className="h-6 w-6 text-[#310860]"
+                      className="h-6 w-6 text-brand"
                       viewBox="0 0 24 24"
                       version="1.1"
                       xmlns="http://www.w3.org/2000/svg"
@@ -258,14 +261,14 @@ const Features = () => {
                       </g>
                     </svg>
                   </div>
-                  <h1 className="font-medium rounded-full px-3 py-1 text-black">
+                  <h1 className="font-medium rounded-full px-3 py-1 text-slate-700">
                     Reportes consolidados de ventas por canal en Odoo.
                   </h1>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-primary/10 rounded-lg flex items-center justify-center h-12 w-12">
                     <svg
-                      className="h-6 w-6 text-[#310860]"
+                      className="h-6 w-6 text-brand"
                       viewBox="0 0 24 24"
                       version="1.1"
                       xmlns="http://www.w3.org/2000/svg"
@@ -286,13 +289,15 @@ const Features = () => {
                       </g>
                     </svg>
                   </div>
-                  <h1 className="font-medium rounded-full px-3 py-1 text-black">
+                  <h1 className="font-medium rounded-full px-3 py-1 text-slate-700">
                     Publicar productos desde odoo a producteca.
                   </h1>
                 </div>
               </div>
               <div className='mt-5 '>
-                <a href="/contact-us" className='bg-[#8a50bc] text-white rounded-md text-sm font-semibold flex-none shadow shadow-primary/20 cursor-pointer p-16 py-3'>Solicitar demo</a>
+                <Link href="/contact-us" className="tech-btn-primary px-16 py-3 text-sm">
+                  Solicitar demo
+                </Link>
               </div>
             </div>
           </div>
@@ -304,20 +309,20 @@ const Features = () => {
               data-aos="fade-right"
               data-aos-duration={600}
             >
-              <span className="text-sm bg-[#8a50bc]/40 text-[#310860] rounded-full px-3 py-1">
+              <span className="text-sm bg-primary/20 text-brand rounded-full px-3 py-1">
                 Verifarma
               </span>
-              <h1 className="text-[#310860] text-3xl font-semibold mt-3 mb-4">
+              <h1 className="text-brand text-3xl font-semibold mt-3 mb-4">
                 VERIFARMA ODOO CONNECTOR
               </h1>
-              <p className="text-black">
+              <p className="text-slate-700">
                 Conector de Odoo con <a href="https://verifarma.com/" className='text-primary underline'>Verifarma</a>
               </p>
               <div className="flex flex-col gap-4 mt-10">
                 <div className="flex items-center gap-4">
                   <div className="bg-primary/10 rounded-lg flex items-center justify-center h-12 w-12">
                     <svg
-                      className="h-6 w-6 text-[#310860]"
+                      className="h-6 w-6 text-brand"
                       viewBox="0 0 24 24"
                       version="1.1"
                       xmlns="http://www.w3.org/2000/svg"
@@ -356,14 +361,14 @@ const Features = () => {
                       </g>
                     </svg>
                   </div>
-                  <h1 className="font-medium text-black">
+                  <h1 className="font-medium text-slate-700">
                     Integración con Proveedores y Laboratorios.
                   </h1>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-primary/10 rounded-lg flex items-center justify-center h-12 w-12">
                     <svg
-                      className="h-6 w-6 text-[#310860]"
+                      className="h-6 w-6 text-brand"
                       viewBox="0 0 24 24"
                       version="1.1"
                       xmlns="http://www.w3.org/2000/svg"
@@ -396,14 +401,14 @@ const Features = () => {
                       </g>
                     </svg>
                   </div>
-                  <h1 className="font-medium text-black">
+                  <h1 className="font-medium text-slate-700">
                     Gestión centralizada de inventarios entre farmacias físicas y bodegas.
                   </h1>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="bg-primary/10 rounded-lg flex items-center justify-center h-12 w-12">
                     <svg
-                      className="h-6 w-6 text-[#310860]"
+                      className="h-6 w-6 text-brand"
                       viewBox="0 0 24 24"
                       version="1.1"
                       xmlns="http://www.w3.org/2000/svg"
@@ -430,13 +435,15 @@ const Features = () => {
                       </g>
                     </svg>
                   </div>
-                  <h1 className="font-medium text-black">
+                  <h1 className="font-medium text-slate-700">
                     Alertas por caducidad de medicamentos o lote específico.
                   </h1>
                 </div>
               </div>
               <div className='mt-5 '>
-                <a href="/contact-us" className='bg-[#8a50bc] text-white rounded-md text-sm font-semibold flex-none shadow shadow-primary/20 cursor-pointer p-16 py-3'>Solicitar demo</a>
+                <Link href="/contact-us" className="tech-btn-primary px-16 py-3 text-sm">
+                  Solicitar demo
+                </Link>
               </div>
             </div>
             <div

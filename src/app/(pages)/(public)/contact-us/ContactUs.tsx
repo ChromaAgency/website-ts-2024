@@ -3,11 +3,11 @@ import ContactForm from './ContactForm'
 
 const ContactUs = () => {
   return (
-    <section className="lg:pb-24 py-6 relative">
+    <section className="relative py-10 lg:pb-24 lg:pt-8">
       <div className="container">
-        <div className="lg:flex align-items-center">
+        <div className="items-center lg:flex">
           <div className="lg:w-1/2">
-            <div className="mb-6 relative bg-clip-border rounded-[0.1875rem]">
+            <div className="relative mb-6 rounded-md bg-clip-border">
               <div className="py-12">
                 <ContactForm />
               </div>
@@ -57,8 +57,11 @@ const ContactUs = () => {
               </svg>
             </span>
             <div className="grow">
-              <h5 className="text-base text-gray-700">Email</h5>
-              <a href="#" className="text-gray-500 my-1">
+              <h5 className="text-base text-slate-700">Email</h5>
+              <a
+                href="mailto:web@chroma.agency"
+                className="my-1 text-slate-600 transition-colors hover:text-primary"
+              >
                 web@chroma.agency
               </a>
             </div>
@@ -96,9 +99,9 @@ const ContactUs = () => {
             </div>
           </div> */}
           <div className="flex mb-3">
-            <span className="flex items-center justify-center w-12 h-12 bg-teal-500/20 rounded-lg relative me-4 shrink-0">
+            <span className="relative me-4 flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-accent/20">
               <svg
-                className="w-7 h-7 text-teal-500"
+                className="h-7 w-7 text-accent-700"
                 viewBox="0 0 24 24"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
@@ -115,8 +118,11 @@ const ContactUs = () => {
               </svg>
             </span>
             <div className="grow">
-              <h5 className="text-base text-gray-700">Dirección</h5>
-              <Link href="https://maps.app.goo.gl/a7RA7kfxV1QMg1LW7" className="text-gray-500 my-1">
+              <h5 className="text-base text-slate-700">Direccion</h5>
+              <Link
+                href="https://maps.app.goo.gl/a7RA7kfxV1QMg1LW7"
+                className="my-1 text-slate-600 transition-colors hover:text-primary"
+              >
               Olavarria 1150, CABA, Argentina
               </Link>
             </div>
