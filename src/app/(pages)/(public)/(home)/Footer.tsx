@@ -46,7 +46,13 @@ const Footer = () => {
             </p>
             <p className="text-slate-300/90 mt-2 text-sm">Medellin, Colombia</p>
             <p className="text-slate-300/90 mt-2 text-sm">Queretaro, Mexico</p>
-            <p className="text-slate-300/90 mt-2 text-sm">Delaware, USA</p>
+            
+            <p className="text-slate-300/90 mt-2 text-sm">
+            <p>Sync Industries LLC</p>
+            <p> EIN: 37-2161139</p>
+            <p>Delaware, USA</p>
+
+            </p>
           </div>
 
           <div>
