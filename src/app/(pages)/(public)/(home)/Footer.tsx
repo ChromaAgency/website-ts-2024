@@ -87,6 +87,12 @@ const Footer = () => {
               >
                 Preguntas frecuentes
               </Link>
+              <Link
+                className="hover:text-accent transition-colors"
+                href="/terminos-y-condiciones"
+              >
+                Terminos y condiciones
+              </Link>
             </div>
           </div>
 
