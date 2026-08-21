@@ -72,7 +72,7 @@ const Content = () => {
               </p>
             </Section>
 
-          <Section id="contratacion" title="2. Como se contrata el servicio (proceso personalizado)">
+          <Section id="contratacion" title="2. Como se contrata el servicio.">
             <p>
               El servicio de Chroma es <strong>personalizado</strong>. No hay
               compra automatica ni checkout en chroma.agency. El vinculo
@@ -210,7 +210,7 @@ const Content = () => {
             </p>
           </Section>
 
-          <Section id="privacidad" title="8. Politica de privacidad (resumen)">
+          <Section id="privacidad" title="8. Politica de privacidad">
             <p>
               Tratamos datos personales que nos envias al contactarnos
               (nombre, email, telefono, empresa y el mensaje) y datos tecnicos
